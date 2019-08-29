@@ -66,7 +66,7 @@ body{
     height: 2rem;
 }
 
-#reviews,
+#testimonials,
 #projects,
 #contact {
     text-align: center;
@@ -74,7 +74,7 @@ body{
     height: fit-content;
 }
 
-#reviews {
+#testimonials {
     background-color: #be3143;
 }
 
@@ -96,7 +96,7 @@ body{
 }
 
 #projects-container,
-#reviews-container {
+#testimonials-container {
     display: flex;
     flex-direction: row;
     width: fit-content;
@@ -104,14 +104,14 @@ body{
     justify-content: center;
 }
 
-#reviews-container .card,
+#testimonials-container .card,
 #projects-container .card {
     margin-bottom: 2rem;
     margin-right: 1rem;
     
 }
 
-#reviews-container .card,
+#testimonials-container .card,
 #projects-container .card{
     height: 31rem;
 }
