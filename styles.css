@@ -1,12 +1,14 @@
-body{
+body {
     font-family: 'Roboto', sans-serif;
 }
+
 #nav-bar {
     position: fixed;
     width: 100%;
     z-index: 100;
 }
-.nav-item{
+
+.nav-item {
     border: none;
     outline: none;
     /* padding: 10px 16px;
@@ -15,10 +17,12 @@ body{
     margin-right: 0.5rem;
 }
 
-.active, .nav-item:hover {
+.active,
+.nav-item:hover {
     background-color: #666;
     color: white;
-  }
+}
+
 #brand-container {
     line-height: 0.5;
 }
@@ -87,10 +91,10 @@ body{
     width: fit-content;
     margin: 0 auto 2rem auto;
     border-bottom: 0.2rem solid white;
-    
+
 }
 
-.section-carousel{
+.section-carousel {
     width: 100%;
     overflow-x: scroll;
 }
@@ -108,11 +112,11 @@ body{
 #projects-container .card {
     margin-bottom: 2rem;
     margin-right: 1rem;
-    
+
 }
 
 #testimonials-container .card,
-#projects-container .card{
+#projects-container .card {
     height: 31rem;
 }
 
@@ -125,28 +129,27 @@ body{
     padding-bottom: 1rem;
     padding-right: 1rem;
     font-style: italic;
-    font-size: 0.7rem;
     height: 20rem;
     overflow-y: scroll;
     text-align: start;
 }
 
-.reviewer-img-thumbnail{
+.reviewer-img-thumbnail {
     width: 3rem;
     height: 3rem;
     border-radius: 50%
 }
 
-.project-title{
+.project-title {
     font-size: 1rem;
 }
 
-.project-description{
+.project-description {
     font-size: 0.8rem;
     padding-bottom: 0.5rem;
 }
 
-.project-call-to-action{
+.project-call-to-action {
     position: absolute;
     bottom: 1rem;
     width: 100%;
@@ -155,7 +158,7 @@ body{
 
 #contact {
     background-color: #5A5F73;
-    
+
 }
 
 #contact-container {
