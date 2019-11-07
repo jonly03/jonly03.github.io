@@ -76,16 +76,20 @@ body {
 
 .learn_call_to_action {
     position: absolute;
-    height: 4rem;
+    height: fit-content;
     bottom: 0;
     margin: 0.7rem auto;
     border-radius: 30px;
     border-color: white;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 #testimonials,
 #projects,
-#contact {
+#contact,
+#mentor {
     text-align: center;
     padding: 6rem 0rem 2rem 0rem;
     height: fit-content;
@@ -174,7 +178,12 @@ body {
 
 }
 
-#contact-container {
+#mentor {
+    background-color: teal;
+}
+
+#contact-container,
+#mentor-container {
     display: flex;
     justify-content: center;
 }
