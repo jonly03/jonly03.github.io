@@ -1,189 +1,186 @@
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 #nav-bar {
-    position: fixed;
-    width: 100%;
-    z-index: 100;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
 }
 
 .nav-item {
-    border: none;
-    outline: none;
-    /* padding: 10px 16px;
+  border: none;
+  outline: none;
+  /* padding: 10px 16px;
     background-color: #f1f1f1; */
-    cursor: pointer;
-    margin-right: 0.5rem;
+  cursor: pointer;
+  margin-right: 0.5rem;
 }
 
 .active,
 .nav-item:hover {
-    background-color: #666;
-    color: white;
+  background-color: #666;
+  color: white;
 }
 
 #brand-container {
-    line-height: 0.5;
+  line-height: 0.5;
 }
 
 #brand-work {
-    font-size: 0.7em;
+  font-size: 0.7em;
 }
 
 #about {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-    background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: white;
 }
 
 .about-name {
-    font-family: "Raleway Dots", cursive;
-    font-size: 5rem;
-    text-align: center;
+  font-family: "Raleway Dots", cursive;
+  font-size: 5rem;
+  text-align: center;
 }
 
 #about-heart {
-    color: red;
+  color: red;
 }
 
 #about-tagline {
-    font-weight: 200;
-    font-style: italic;
-    color: #be3143;
+  font-weight: 200;
+  font-style: italic;
+  color: #be3143;
 }
 
 #about-social-media {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin-top: 1rem;
-    width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+  width: 50%;
 }
 
 .social-media-icon {
-    width: 2rem;
-    height: 2rem;
+  width: 2rem;
+  height: 2rem;
 }
 
 .learn_call_to_action {
-    position: absolute;
-    height: fit-content;
-    bottom: 0;
-    margin: 0.7rem auto;
-    border-radius: 30px;
-    border-color: white;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+  position: absolute;
+  height: fit-content;
+  bottom: 0;
+  margin: 0.7rem auto;
+  border-radius: 30px;
+  border-color: white;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 #testimonials,
 #projects,
 #contact,
 #mentor {
-    text-align: center;
-    padding: 6rem 0rem 2rem 0rem;
-    height: fit-content;
+  text-align: center;
+  padding: 6rem 0rem 2rem 0rem;
+  height: fit-content;
 }
 
 #testimonials {
-    background-color: #be3143;
+  background-color: #be3143;
 }
 
 #projects {
-    background: #45567d;
+  background: #45567d;
 }
 
 .section-header {
-    color: white;
-    width: fit-content;
-    margin: 0 auto 2rem auto;
-    border-bottom: 0.2rem solid white;
-
+  color: white;
+  width: fit-content;
+  margin: 0 auto 2rem auto;
+  border-bottom: 0.2rem solid white;
 }
 
 .section-carousel {
-    width: 100%;
-    overflow-x: scroll;
+  width: 100%;
+  overflow-x: scroll;
 }
 
 #projects-container,
 #testimonials-container {
-    display: flex;
-    flex-direction: row;
-    width: fit-content;
-    min-width: 100%;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  min-width: 100%;
+  justify-content: center;
 }
 
 #testimonials-container .card,
 #projects-container .card {
-    margin-bottom: 2rem;
-    margin-right: 1rem;
-
+  margin-bottom: 2rem;
+  margin-right: 1rem;
 }
 
 #testimonials-container .card,
 #projects-container .card {
-    height: 31rem;
+  height: 31rem;
 }
 
 .reviewer {
-    border-bottom: 0.1rem solid lightgray;
+  border-bottom: 0.1rem solid lightgray;
 }
 
 .review-quote {
-    margin-top: 1rem;
-    padding-bottom: 1rem;
-    padding-right: 1rem;
-    font-style: italic;
-    height: 20rem;
-    overflow-y: scroll;
-    text-align: start;
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 1rem;
+  font-style: italic;
+  height: 20rem;
+  overflow-y: scroll;
+  text-align: start;
 }
 
 .reviewer-img-thumbnail {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
 }
 
 .project-title {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 .project-description {
-    font-size: 0.8rem;
-    padding-bottom: 0.5rem;
+  font-size: 0.8rem;
+  padding-bottom: 0.5rem;
 }
 
 .project-call-to-action {
-    position: absolute;
-    bottom: 1rem;
-    width: 100%;
-    left: 0;
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+  left: 0;
 }
 
 #contact {
-    background-color: #5A5F73;
-
+  background-color: #5a5f73;
 }
 
 #mentor {
-    background-color: teal;
+  background-color: teal;
 }
 
 #contact-container,
 #mentor-container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
