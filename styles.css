@@ -115,8 +115,15 @@ body {
   overflow-x: scroll;
 }
 
-#projects-container,
 #testimonials-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 28rem);
+  grid-auto-flow: dense;
+  grid-auto-rows: 35rem;
+  justify-content: center;
+}
+
+#projects-container {
   display: flex;
   flex-direction: row;
   width: fit-content;
@@ -130,9 +137,19 @@ body {
   margin-right: 1rem;
 }
 
-#testimonials-container .card,
-#projects-container .card {
-  height: 31rem;
+.card_ifra,
+.card_falon,
+.card_chris,
+.card_sherif,
+.card_lee {
+  grid-column: span 2;
+}
+
+.card_michelle,
+.card_haddassah,
+.card_holy,
+.card_joe {
+  grid-row: span 2;
 }
 
 .reviewer {
@@ -144,8 +161,8 @@ body {
   padding-bottom: 1rem;
   padding-right: 1rem;
   font-style: italic;
-  height: 20rem;
-  overflow-y: scroll;
+  /* height: 20rem;
+  overflow-y: scroll; */
   text-align: start;
 }
 
