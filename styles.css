@@ -29,6 +29,11 @@ body {
 
 #brand-container {
   line-height: 0.5;
+  margin-left: 20px;
+}
+
+.menu_items {
+  margin-right: 20px;
 }
 
 #brand-work {
@@ -138,10 +143,15 @@ body {
 }
 
 .card_ifra,
+.card_samekh,
 .card_falon,
 .card_chris,
 .card_sherif,
-.card_lee {
+.card_lee,
+.card_peter,
+.card_stan,
+.card_nicholas,
+.card_ibra {
   grid-column: span 2;
 }
 

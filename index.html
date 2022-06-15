@@ -7,9 +7,9 @@
 
     <!--Bootstrap CSS-->
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
 
@@ -46,11 +46,11 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto justify-content-end">
-          <li class="nav-item">
+      <div class="collapse navbar-collapse justify-content-end menu_items" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <!-- <li class="nav-item">
             <a class="nav-link" href="#">About </a>
-          </li>
+          </li> -->
           <li class="nav-item">
             <a class="nav-link" href="#testimonials">Testimonials</a>
           </li>
@@ -58,18 +58,10 @@
             <a class="nav-link" href="#projects">Projects</a>
           </li> -->
 
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" href="#contact">Contact</a>
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              href="https://www.codingzeroto100.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Classes</a
-            >
-          </li>
+          </li> -->
+          
         </ul>
       </div>
     </nav>
@@ -108,7 +100,7 @@
         </a>
       </div>
 
-      <div class="learn_call_to_action">
+      <!-- <div class="learn_call_to_action">
         <a
           href="#contact"
           class="btn"
@@ -121,7 +113,7 @@
           "
         >
           Learn how to build websites and apps from scratch with me
-        </a>
+        </a> -->
       </div>
     </section>
 
@@ -130,74 +122,97 @@
       <h2 class="section-header">Testimonials</h2>
       <div class="section-carousel">
         <div id="testimonials-container">
-          <div class="card">
+          <!-- Joe Plukarski -->
+          <div class="card card_joe">
             <div class="card-body card_content">
               <div class="reviewer">
                 <img
                   class="reviewer-img-thumbnail"
-                  src="./resources/morgan.jpeg"
-                  alt="Morgan profile picture"
+                  src="./resources/joeplukarski.jpeg"
+                  alt="Joe profile picture"
                 />
                 <h5 class="card-title">
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://www.linkedin.com/in/morganelimills/"
-                    >Morgan Mills</a
+                    href="https://www.linkedin.com/in/josephplukarski/"
+                    >Joseph Plukarski</a
                   >
                 </h5>
 
-                <h6 class="card-subtitle mb-2 text-muted">
-                  Fullstack Developer, former student
-                </h6>
+                <p class="card-subtitle mb-2 fw-bold">
+                  Now: Software Engineer @PayPal
+                </p>
+                <p class="card-subtitle mb-2 text-muted font-monospace">
+                  Before: Freelance Blogger & Lyric Transcriber
+                </p>
               </div>
               <p class="card-text review-quote">
-                Nelly was my instructor for a full stack development boot camp.
-                I entered his class with minimal coding knowledge, and on the
-                many occasions that I felt overwhelmed, discouraged and ready to
-                quit, Nelly was by my side giving me encouragement and making
-                sure I understood the material. Nelly is the most all-in,
-                dedicated teacher I've ever had- he consistently went above and
-                beyond for me. He was my tutor, my mentor and is now a lifelong
-                friend. His passion for coding and life itself is so sincere, he
-                truly is a bright light in this world. Thank you for everything
-                Nelly!
+                I was Nelly's student from July 2018-October 2018 at the
+                Northwestern Full-Stack Coding Bootcamp. At the time, I was a
+                freelance blog writer and lyric transcriber and delivered for
+                Postmates. 
+                <br />
+                <br />
+                I was desperately looking for a career change. I had
+                managed websites via WordPress before, but had no experience
+                with coding outside of very basic HTML and CSS. When first
+                making this transition into the world of web developing it can
+                be very overwhelming. There are so many acronyms, libraries,
+                frameworks, languages out there that imposter syndrome is nearly
+                impossible to avoid. Nelly not only taught us how to code, but
+                he taught us patience and perseverance. I saw firsthand Nelly
+                get excited over error messages or scripts not working as
+                expected. This helped me change my mindset from being
+                intimidated and frustrated when things don't work as expected to
+                being excited at opportunities to solve problems through
+                debugging code.
+                <br />
+                <br />
+                I originally went to college to become a High School English
+                Teacher. I quickly decided that I did not have a passion for
+                teaching, but this same passion that I lacked I can clearly see
+                in Nelly. He takes his time to get to know his students
+                individually and what motivates them, and how they best learn.
+                He also approaches the classroom more like getting together with
+                a friend who is showing you something. I really appreciated
+                everything Nelly did for us and would take another class with
+                him 10/10 times if given the opportunity!
               </p>
             </div>
           </div>
+          <!-- Parcell Gaskins -->
           <div class="card">
             <div class="card-body card_content">
               <div class="reviewer">
                 <img
                   class="reviewer-img-thumbnail"
-                  src="./resources/kevin.jpeg"
-                  alt="Kevin profile picture"
+                  src="./resources/percell-gaskins.jpeg"
+                  alt="Parcell Gaskins profile picture"
                 />
                 <h5 class="card-title">
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://www.linkedin.com/in/kevin-woulfe/"
-                    >Kevin Woulfe</a
+                    href="https://www.linkedin.com/in/percell-gaskins-8a644014b/"
+                    >Parcell Gaskins</a
                   >
                 </h5>
 
-                <h6 class="card-subtitle mb-2 text-muted">
-                  Front End Web Production Specialist, former student
-                </h6>
+                <p class="card-subtitle mb-2 fw-bold">
+                  Now: Software Development Engineering Apprentice @Amazon
+                </p>
+                <p class="card-subtitle mb-2 text-muted font-monospace">
+                  Before: NFL Linebacker @St. Louis Rams
+                </p>
               </div>
               <p class="card-text review-quote">
-                Nelly is a fantastic teacher. He has the ability and patience to
-                teach anyone. His enthusiasm is contagious and his drive is
-                inspiring. At the time I met Nelly, I knew nothing about Web
-                Development. After a very short time, he was able to give me the
-                tools to create a foundation on which I was able to grow and
-                build as a developer. Nelly once told me it was his calling to
-                teach those around him. I believe he has found his path. Thank
-                you Nelly for the energy you bring to this world.
+                The best developer of aspiring software development engineers on the planet 🌎 His teaching style is an experience not a lecture . If I could give one word to explain Nelly it would be GENIUS……
               </p>
             </div>
           </div>
+          
+          <!-- Ifra -->
           <div class="card card_ifra">
             <div class="card-body card_content">
               <div class="reviewer">
@@ -215,9 +230,12 @@
                   >
                 </h5>
 
-                <h6 class="card-subtitle mb-2 text-muted">
-                  App Engineering Specialist, former student
-                </h6>
+                <p class="card-subtitle mb-2 fw-bold">
+                  Now: Application Development Associate Manager @Accenture
+                </p>
+                <p class="card-subtitle mb-2 text-muted font-monospace">
+                  Before: Graphic Designer
+                </p>
               </div>
               <p class="card-text review-quote">
                 "You cannot teach a man anything, you can only help him find it
@@ -238,6 +256,223 @@
               </p>
             </div>
           </div>
+          
+          <!-- Izzy -->
+          <div class="card">
+            <div class="card-body card_content">
+              <div class="reviewer">
+                <img
+                  class="reviewer-img-thumbnail"
+                  src="./resources/izzy.jpeg"
+                  alt="Isabel Servin profile picture"
+                />
+                <h5 class="card-title">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/isabel-servin/"
+                    >Isabel Servin</a
+                  >
+                </h5>
+
+                <p class="card-subtitle mb-2 fw-bold">
+                  Now: Software Developer @Amazon
+                </p>
+                <p class="card-subtitle mb-2 text-muted font-monospace">
+                  Before: Network Admin - US Marine Corps
+                </p>
+              </div>
+              <p class="card-text review-quote">
+                I had the absolute PRIVILEGE of learning Web Development from
+                Nelly, his teaching style is not only progressive and
+                forward-thinking, it encourages ingenuity from his students;
+                fosters true interpersonal growth that best serves each
+                individual he mentors by adapting his teaching style to meet the
+                needs of those around him. Nelly's breathe of knowledge is
+                impressive to say the very least, but it's his passion for this
+                industry and for this students that sets him apart from anyone I
+                have ever been blessed enough to meet! Nelly has hands down
+                changed my hunger for growth, learning, and deep desire to pay
+                it forward and pass off knowledge. He is the epitome of a true
+                leader and teacher! Nelly has my highest praises and
+                recommendations!
+              </p>
+            </div>
+          </div>
+          <!-- Walter -->
+          <div class="card">
+            <div class="card-body card_content">
+              <div class="reviewer">
+                <img
+                  class="reviewer-img-thumbnail"
+                  src="./resources/walter-thomas.jpeg"
+                  alt="Walter Thomas profile picture"
+                />
+                <h5 class="card-title">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/walterlthomas/"
+                    >Walter Thomas</a
+                  >
+                </h5>
+
+                <p class="card-subtitle mb-2 fw-bold">
+                  Now: Software Development Engineering Apprentice @Amazon
+                </p>
+                <p class="card-subtitle mb-2 text-muted font-monospace">
+                  Before: US Marine Corps
+                </p>
+              </div>
+              <p class="card-text review-quote">
+                Nelly is by far the most thorough instructor on the market. He is tremendously versatile and probably has the most patience out of anyone I’ve ever dealt with so far. He has the ability to take the most complex of topics and break it down to where a toddler could understand. I can’t recommend this guy enough. 5 stars!!
+              </p>
+            </div>
+          </div>
+          <!-- Morgan -->
+          <div class="card">
+            <div class="card-body card_content">
+              <div class="reviewer">
+                <img
+                  class="reviewer-img-thumbnail"
+                  src="./resources/morgan.jpeg"
+                  alt="Morgan profile picture"
+                />
+                <h5 class="card-title">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/morganelimills/"
+                    >Morgan Mills</a
+                  >
+                </h5>
+
+                <p class="card-subtitle mb-2 fw-bold">
+                  Now: UI/UX Developer @NICE CXone
+                </p>
+                <p class="card-subtitle mb-2 text-muted font-monospace">
+                  Before: Cashier at a grocery store
+                </p>
+              </div>
+              <p class="card-text review-quote">
+                Nelly was my instructor for a full stack development boot camp.
+                I entered his class with minimal coding knowledge, and on the
+                many occasions that I felt overwhelmed, discouraged and ready to
+                quit, Nelly was by my side giving me encouragement and making
+                sure I understood the material. Nelly is the most all-in,
+                dedicated teacher I've ever had- he consistently went above and
+                beyond for me. He was my tutor, my mentor and is now a lifelong
+                friend. His passion for coding and life itself is so sincere, he
+                truly is a bright light in this world. Thank you for everything
+                Nelly!
+              </p>
+            </div>
+          </div>
+
+          <!-- Kevin Woulfe -->
+          <div class="card">
+            <div class="card-body card_content">
+              <div class="reviewer">
+                <img
+                  class="reviewer-img-thumbnail"
+                  src="./resources/kevin.jpeg"
+                  alt="Kevin profile picture"
+                />
+                <h5 class="card-title">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/kevin-woulfe/"
+                    >Kevin Woulfe</a
+                  >
+                </h5>
+
+                <p class="card-subtitle mb-2 fw-bold">
+                  Now: eCommerce Manager @California Chamber of Commerce
+                </p>
+                <p class="card-subtitle mb-2 text-muted font-monospace">
+                  Before: Worked at a bike store
+                </p>
+              </div>
+              <p class="card-text review-quote">
+                Nelly is a fantastic teacher. He has the ability and patience to
+                teach anyone. His enthusiasm is contagious and his drive is
+                inspiring. At the time I met Nelly, I knew nothing about Web
+                Development. After a very short time, he was able to give me the
+                tools to create a foundation on which I was able to grow and
+                build as a developer. Nelly once told me it was his calling to
+                teach those around him. I believe he has found his path. Thank
+                you Nelly for the energy you bring to this world.
+              </p>
+            </div>
+          </div>
+          <!-- Justin Bruce -->
+          <div class="card">
+            <div class="card-body card_content">
+              <div class="reviewer">
+                <img
+                  class="reviewer-img-thumbnail"
+                  src="./resources/justin-bruce.jpeg"
+                  alt="Justin Bruce profile picture"
+                />
+                <h5 class="card-title">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/justin-n-bruce/"
+                    >Justin Bruce</a
+                  >
+                </h5>
+
+                <p class="card-subtitle mb-2 fw-bold">
+                  Now: Software Developer @Amazon
+                </p>
+                <p class="card-subtitle mb-2 text-muted font-monospace">
+                  Before: Nuclear Electronic Technician - US Navy
+                </p>
+              </div>
+              <p class="card-text review-quote">
+                With no experience in JS, HTML, or CSS, Nelly taught me what I
+                needed to know to be a full-stack developer in 3 weeks. I could
+                not recommend him enough, he taught more than just curriculum
+                but really made us run through the process of coding and
+                debugging while he was guiding us and having us think through
+                the process. I only wish I had more than 3 weeks with him
+                because there is no telling how much more I could have learned.
+              </p>
+            </div>
+          </div>
+          <!-- Maria Neeves -->
+          <div class="card">
+            <div class="card-body card_content">
+              <div class="reviewer">
+                <img
+                  class="reviewer-img-thumbnail"
+                  src="./resources/maria-nieves.jpeg"
+                  alt="Maria Nieves profile picture"
+                />
+                <h5 class="card-title">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/maria-nieves-40b932192/"
+                    >Maria Nieves Mills</a
+                  >
+                </h5>
+
+                <p class="card-subtitle mb-2 fw-bold">
+                  Now: Software Development Engineer @Amazon
+                </p>
+                <p class="card-subtitle mb-2 text-muted font-monospace">
+                  Before: IT Support Technician
+                </p>
+              </div>
+              <p class="card-text review-quote">
+                Nelly by far is the MVP of instructors. He’s willing to go the extra mile to figure out your learning style so that he could help you. He makes everything fun to learn and his content is clutch! Thank you for everything, Nelly! 10/10.
+              </p>
+            </div>
+          </div>
+          <!-- Charlie Grogan -->
           <div class="card">
             <div class="card-body card_content">
               <div class="reviewer">
@@ -255,9 +490,12 @@
                   >
                 </h5>
 
-                <h6 class="card-subtitle mb-2 text-muted">
-                  Web Developer, former student
-                </h6>
+                <p class="card-subtitle mb-2 fw-bold">
+                  Now: Data Strategist & Technical Consultant @Baxter International
+                </p>
+                <p class="card-subtitle mb-2 text-muted font-monospace">
+                  Before: Sales Consultant & Restaurant Manager
+                </p>
               </div>
               <p class="card-text review-quote">
                 I had the pleasure of being one of Nelly’s students and the
@@ -274,6 +512,139 @@
               </p>
             </div>
           </div>
+          
+          <!-- Brit Nell -->
+          <div class="card">
+            <div class="card-body card_content">
+              <div class="reviewer">
+                <img
+                  class="reviewer-img-thumbnail"
+                  src="./resources/brit-nell.jpeg"
+                  alt="Brit Nell profile picture"
+                />
+                <h5 class="card-title">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/britnell/"
+                    >Brit Nell</a
+                  >
+                </h5>
+
+                <p class="card-subtitle mb-2 fw-bold">
+                  Now: Certified Scrum Master & Software Analyst
+                </p>
+                <p class="card-subtitle mb-2 text-muted font-monospace">
+                  Before: Physical Therapist
+                </p>
+              </div>
+              <p class="card-text review-quote">
+                Nelly was fantastic at breaking down Javascript in a way that
+                made sense. Instead of just lecturing the how-to, he gave us
+                practical assignments that put all the elements into perspective
+                and helped it all click. I know for a fact I was not the only
+                one in my cohort that considered him the best teacher we had in
+                our bootcamp!
+              </p>
+            </div>
+          </div>
+          <!-- Roman Penn -->
+          <div class="card">
+            <div class="card-body card_content">
+              <div class="reviewer">
+                <img
+                  class="reviewer-img-thumbnail"
+                  src="./resources/roman-penn.jpeg"
+                  alt="Roman Penn profile picture"
+                />
+                <h5 class="card-title">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/romanpennwebmc/"
+                    >Roman Penn</a
+                  >
+                </h5>
+
+                <p class="card-subtitle mb-2 fw-bold">
+                  Now: Software Engineer @Amazon
+                </p>
+                <p class="card-subtitle mb-2 text-muted font-monospace">
+                  Before: US Marine Corps
+                </p>
+              </div>
+              <p class="card-text review-quote">
+                Nelly, was probably the most engaging instructor I’ve ever had during my time in the software development industry. The way he taught and explained all the aspects of full stack web development showed he was both knowledgeable and passionate about what he was teaching and gave me a fire for this field in software development that I didn’t think I would ever have. I could not recommend him enough!!  
+              </p>
+            </div>
+          </div>
+          <!-- Luxi Meng -->
+          <div class="card">
+            <div class="card-body card_content">
+              <div class="reviewer">
+                <img
+                  class="reviewer-img-thumbnail"
+                  src="./resources/luxi-meng.jpeg"
+                  alt="Luxi Meng profile picture"
+                />
+                <h5 class="card-title">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/luximeng"
+                    >Luxi Meng</a
+                  >
+                </h5>
+
+                <p class="card-subtitle mb-2 fw-bold">
+                  Now: Software Engineer @Amazon
+                </p>
+                <p class="card-subtitle mb-2 text-muted font-monospace">
+                  Before: Chemical, Biological, Radiological & Nuclear Specialist - US Army
+                </p>
+              </div>
+              <p class="card-text review-quote">
+                Nelly is apparently not only great at but also passionate about teaching. He is meticulous in the way he breaks down knowledges and deliver at a pace that is suitable for even the newest of coders. He also cares a lot of about each one of us and not leaving anyone behind. His layback demeanor also make learning much more fun. I wish all teachers are like him! 
+              </p>
+            </div>
+          </div>
+
+          <!-- Henwin Cuffy -->
+          <div class="card">
+            <div class="card-body card_content">
+              <div class="reviewer">
+                <img
+                  class="reviewer-img-thumbnail"
+                  src="./resources/henwin.jpeg"
+                  alt="Henwin Cuffy profile picture"
+                />
+                <h5 class="card-title">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/henwin-cuffy/"
+                    >Henwin Cuffy</a
+                  >
+                </h5>
+
+                <p class="card-subtitle mb-2 fw-bold">
+                  Now: Software Engineer Apprentice @Amazon
+                </p>
+                <p class="card-subtitle mb-2 text-muted font-monospace">
+                  Before: US Marine Corps
+                </p>
+              </div>
+              <p class="card-text review-quote">
+                Nelly is a phenomenal instructor! He was our HTML/CSS/JavaScript
+                instructor. He made it a point to show how to solve problems
+                rather than just giving us the answers. He was also very patient
+                and so willing to walk you through any concept you didn’t
+                understand using a real world analogy, painting a very clear
+                picture of what is happening. He elevates anyone he teaches.
+              </p>
+            </div>
+          </div>
+          <!-- Shannon Edgar -->
           <div class="card">
             <div class="card-body card_content">
               <div class="reviewer">
@@ -291,9 +662,12 @@
                   >
                 </h5>
 
-                <h6 class="card-subtitle mb-2 text-muted">
-                  Senior Graphic Designer & Web Developer, former student
-                </h6>
+                <p class="card-subtitle mb-2 fw-bold">
+                  Now: Freelance Art Director and Graphic Designer at Shannon Edgar Design
+                </p>
+                <p class="card-subtitle mb-2 text-muted font-monospace">
+                  Before: Senior Graphic Designer @Page Design Group
+                </p>
               </div>
               <p class="card-text review-quote">
                 Nelly taught my Full Stack Bootcamp at UC Davis. The instruction
@@ -308,6 +682,7 @@
               </p>
             </div>
           </div>
+          <!-- Jackson Harris III -->
           <div class="card">
             <div class="card-body card_content">
               <div class="reviewer">
@@ -325,9 +700,12 @@
                   >
                 </h5>
 
-                <h6 class="card-subtitle mb-2 text-muted">
-                  Software Engineer, former student
-                </h6>
+                <p class="card-subtitle mb-2 fw-bold">
+                  Now: Software Engineer @Niantic
+                </p>
+                <p class="card-subtitle mb-2 text-muted font-monospace">
+                  Before: Worked in Marketing & Sales
+                </p>
               </div>
               <p class="card-text review-quote">
                 Nelly is an accomplished mentor, developer, and teacher. He has
@@ -345,6 +723,8 @@
               </p>
             </div>
           </div>
+
+          <!-- Michelle Jung -->
           <div class="card card_michelle">
             <div class="card-body card_content">
               <div class="reviewer">
@@ -362,9 +742,12 @@
                   >
                 </h5>
 
-                <h6 class="card-subtitle mb-2 text-muted">
-                  Web Developer, former student
-                </h6>
+                <p class="card-subtitle mb-2 fw-bold">
+                  Now: Web Developer @Paratransit Inc
+                </p>
+                <p class="card-subtitle mb-2 text-muted font-monospace">
+                  Before: Research Assistant @Ohio State University School of Communication
+                </p>
               </div>
               <p class="card-text review-quote">
                 If you walk into a classroom and Nelly is your instructor, be
@@ -405,6 +788,451 @@
               </p>
             </div>
           </div>
+          <!-- Samekh Resh -->
+          <div class="card card_samekh">
+            <div class="card-body card_content">
+              <div class="reviewer">
+                <img
+                  class="reviewer-img-thumbnail"
+                  src="./resources/samekh-resh.jpeg"
+                  alt="Samekh Resh profile picture"
+                />
+                <h5 class="card-title">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/nicolas-nico-cueva-19b4a15a/"
+                    >Samekh Resh</a
+                  >
+                </h5>
+
+                <p class="card-subtitle mb-2 fw-bold">
+                  Now: Software Development Engineer - Apperentice @Audible
+                </p>
+                <p class="card-subtitle mb-2 text-muted font-monospace">
+                  Before: Worked in Media Production
+                </p>
+              </div>
+              <p class="card-text review-quote">
+                It had been a while (like a couple of months) since I had picked up anything HTML/CSS/JS oriented to create a CRUD app and to be fair, I was a bit rusty. Nelly was able to not only draw that information out of me, but was able to even teach me something new (thank you breakpoints!). 
+                <br />
+                <br />
+                The thing about Nelly, and his teaching styles, is that he truly wants you to get it. He doesn't want you to just be able to do what needs to be done, but to have finesse with it. To have a truly full and fleshed out understanding of the mechanics that are being used.
+                <br />
+                <br />
+                I've only had a few mentors (thank you Resilient Coders) who were able to uphold that level of instruction; a careful, well rounded and in-depth instruction that increases my foundation of learning and gives me new skills to jump from.
+                <br />
+                <br />
+                If you need a teacher for full-stack building apps, and maybe even some no-code; Nelly is the one for you.
+              </p>
+            </div>
+          </div>
+          <!-- Michael Mirkovic -->
+          <div class="card">
+            <div class="card-body card_content">
+              <div class="reviewer">
+                <img
+                  class="reviewer-img-thumbnail"
+                  src="./resources/michael-mirk.jpeg"
+                  alt="Michael Mirkovic profile picture"
+                />
+                <h5 class="card-title">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/michael-mirkovic/"
+                    >Michael Mirkovic</a
+                  >
+                </h5>
+
+                <p class="card-subtitle mb-2 fw-bold">
+                  Now: Software Engineer @Amazon
+                </p>
+                <p class="card-subtitle mb-2 text-muted font-monospace">
+                  Before: Technology Consulting Associate @PwC
+                </p>
+              </div>
+              <p class="card-text review-quote">
+                Having some knowledge in JS, html, and css didnt hurt me in Nelly's class. Even if I knew the cirriculm I always walked away learning one new thing. From breakpoints to just to little tricks of the trade. Nelly was sure to engage everyone and teach effectivly in a remote environment which is no small task. I would highly recommend nelly as an instructor or just someone to work with!
+              </p>
+            </div>
+          </div>
+          <!-- Kathy Le -->
+          <div class="card">
+            <div class="card-body card_content">
+              <div class="reviewer">
+                <img
+                  class="reviewer-img-thumbnail"
+                  src="./resources/kathy-le.jpeg"
+                  alt="Kathy Le profile picture"
+                />
+                <h5 class="card-title">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/kathyle-dev/"
+                    >Kathy Le</a
+                  >
+                </h5>
+
+                <p class="card-subtitle mb-2 fw-bold">
+                  Now: Software Development Engineer @Audible
+                </p>
+                <p class="card-subtitle mb-2 text-muted font-monospace">
+                  Before: Personal Trainer @Ethos Fitness + Performance
+                </p>
+              </div>
+              <p class="card-text review-quote">
+                Nelly is very energetic and patient when teaching. He made learning JavaScript fun and simple. Highly recommended!
+              </p>
+            </div>
+          </div>
+
+          <!-- Ibrahim Gurhan -->
+          <div class="card card_ibra">
+            <div class="card-body card_content">
+              <div class="reviewer">
+                <img
+                  class="reviewer-img-thumbnail"
+                  src="./resources/ibrahim-gurhan.jpeg"
+                  alt="Ibrahim Gurhan profile picture"
+                />
+                <h5 class="card-title">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/ibrahimgurhan/"
+                    >Ibrahim Gurhan</a
+                  >
+                </h5>
+
+                <p class="card-subtitle mb-2 fw-bold">
+                  Now: Software Development Engineer - Apprentice @Audible
+                </p>
+                <p class="card-subtitle mb-2 text-muted font-monospace">
+                  Before: University Parking Locations Supervisor @SP+
+                </p>
+              </div>
+              <p class="card-text review-quote">
+                When it comes to tech training, Nelly is by far the best instructor I've encountered. Nelly's initial act was to establish a personal rapport with each and every one of the students. During our time together, we became quite close, and Nelly spoke to us as if he were one of us. Nelly's dedication to providing the best possible education was clear to anybody who met him. In addition to teaching me HTML, CSS, JS and REACT's foundations, Nelly also simplified a number of complex areas that I had previously found difficult. He was able to break down difficult concepts and explain them in novel ways that made it easier for us to understand them. To me, the most enjoyable component of Nelly's teaching technique comes from his energetic and positive demeanor. When he's in the room, there's never a dull moment. There's nobody I know more qualified to teach programming than Nelly.
+              </p>
+            </div>
+          </div>
+
+          <!-- Sterling Meriweather -->
+          <div class="card">
+            <div class="card-body card_content">
+              <div class="reviewer">
+                <img
+                  class="reviewer-img-thumbnail"
+                  src="./resources/sterling-meri.jpeg"
+                  alt="Sterling Meriweather profile picture"
+                />
+                <h5 class="card-title">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/sterling-meriweather/"
+                    >Sterling Meriweather</a
+                  >
+                </h5>
+
+                <p class="card-subtitle mb-2 fw-bold">
+                  Now: Software Engineer @Amazon Web Services
+                </p>
+                <p class="card-subtitle mb-2 text-muted font-monospace">
+                  Before: Full Stack Developer @voto x voto
+                </p>
+              </div>
+              <p class="card-text review-quote">
+                Nelly has been instrumental in my journey as a Software Engineer. His approach to teaching is like no other and pushes you beyond your comfort level, molding you into a seasoned engineer. I recommend Nelly for anyone wanting to advance themselves in the realm of programming.
+              </p>
+            </div>
+          </div>
+          <!-- Danny Manandhar -->
+          <div class="card">
+            <div class="card-body card_content">
+              <div class="reviewer">
+                <img
+                  class="reviewer-img-thumbnail"
+                  src="./resources/danny-manandhar.jpeg"
+                  alt="Danny Manandhar profile picture"
+                />
+                <h5 class="card-title">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/dannymanandhar/"
+                    >Danny Manandhar</a
+                  >
+                </h5>
+
+                <p class="card-subtitle mb-2 fw-bold">
+                  Now: Software Development Engineer @Amazon
+                </p>
+                <p class="card-subtitle mb-2 text-muted font-monospace">
+                  Before: Operations Supervisor - US Army
+                </p>
+              </div>
+              <p class="card-text review-quote">
+                First of all, Nelly is a splendid instructor. Second, he is very patient with everyone. His motivation and guidance helped me keep my chin up and become better at coding. I cannot thank him enough for the support that he provided me during the coding bootcamp. 
+              </p>
+            </div>
+          </div>
+          <!-- Anthony Johnson -->
+          <div class="card">
+            <div class="card-body card_content">
+              <div class="reviewer">
+                <img
+                  class="reviewer-img-thumbnail"
+                  src="./resources/anthony-johnson.jpeg"
+                  alt="Anthony Johnson profile picture"
+                />
+                <h5 class="card-title">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/adanieljohnson/"
+                    >Anthony Johnson</a
+                  >
+                </h5>
+
+                <p class="card-subtitle mb-2 fw-bold">
+                  Now: Software Engineer @Amazon
+                </p>
+                <p class="card-subtitle mb-2 text-muted font-monospace">
+                  Before: Software Engineer @Adyton PBC
+                </p>
+              </div>
+              <p class="card-text review-quote">
+                While attending TLG, I had the pleasure of having Nelly as an instructor. Nellys ability to break down hard problems into bits of easily digestible knowledge drops in unparalleled. Nelly truly cares about making tech accessible to everyone, including people like me with zero technical background or formal education. 
+                <br>
+                <br>
+                I’m very grateful for Nelly,
+                <br>
+                <br>
+                Thank you 🙏 
+              </p>
+            </div>
+          </div>
+
+
+          <!-- Kelson Smith -->
+          <div class="card">
+            <div class="card-body card_content">
+              <div class="reviewer">
+                <img
+                  class="reviewer-img-thumbnail"
+                  src="./resources/kelson-smith.jpeg"
+                  alt="Kelson Smith profile picture"
+                />
+                <h5 class="card-title">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/kelsonsmith/"
+                    >Kelson Smith</a
+                  >
+                </h5>
+
+                <p class="card-subtitle mb-2 fw-bold">
+                  Now: Software Development Engineer @Clear Channel Outdoor
+                </p>
+                <p class="card-subtitle mb-2 text-muted font-monospace">
+                  Before: Director of Corportate IT @IT Devices, Inc
+                </p>
+              </div>
+              <p class="card-text review-quote">
+                Nelly taught our HTML/CSS/JS portion of the TLG SDE apprentice cohort. He is patient, kind, deeply knowledgeable, and a wonderful instructor. He is equally at home covering basics in detail until everyone is on board, as well as diving deep into the bowels of something he is learning along with a student to figure out how to implement a new library. I can't recommend him highly enough.
+              </p>
+            </div>
+          </div>
+          <!-- Sarah Lichy -->
+          <div class="card">
+            <div class="card-body card_content">
+              <div class="reviewer">
+                <img
+                  class="reviewer-img-thumbnail"
+                  src="./resources/sarah-lichy.jpeg"
+                  alt="Sarah Lichy profile picture"
+                />
+                <h5 class="card-title">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/sarah-lichy-62080118b/"
+                    >Sarah Lichy</a
+                  >
+                </h5>
+
+                <p class="card-subtitle mb-2 fw-bold">
+                  Now: Software Development Engineer @Amazon
+                </p>
+                <p class="card-subtitle mb-2 text-muted font-monospace">
+                  Before: IT System Admin - US Air Force
+                </p>
+              </div>
+              <p class="card-text review-quote">
+                Nelly is a fantastic teacher that can implement different variations for your learning style to make sure that you get to your desired result and understand it completely. Everything we worked on and were taught were real world ways to become more efficient and proficient professionals, I went from 0 to dangerous with full stack because of him.
+              </p>
+            </div>
+          </div>
+          <!-- Samuel Holtzman -->
+          <div class="card">
+            <div class="card-body card_content">
+              <div class="reviewer">
+                <img
+                  class="reviewer-img-thumbnail"
+                  src="./resources/samuel-holtzman.jpeg"
+                  alt="Samuel Holtzman profile picture"
+                />
+                <h5 class="card-title">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/sam-holtzman/"
+                    >Samuel Holtzman</a
+                  >
+                </h5>
+
+                <p class="card-subtitle mb-2 fw-bold">
+                  Now: Business Analyst @United Wholesale Morgage
+                </p>
+                <p class="card-subtitle mb-2 text-muted font-monospace">
+                  Before: Ecology & Evolution Biology Research Assistant @University of Michigan
+                </p>
+              </div>
+              <p class="card-text review-quote">
+                Going into the Northwestern bootcamp, I had little experience in coding. Nelly made every day interesting, fun, and filled with new concepts to learn. I looked forward coming in every day and learning material as well as getting to know Nelly. I have never met such a down to earth instructor, who was willing to go above and beyond to help every one of his students. It was a pleasure to be able to learn from Nelly, and I only hope that in the future I have to privilege to work with and learn from him again.
+              </p>
+            </div>
+          </div>
+          <!-- Lateef Raheem-->
+          <div class="card">
+            <div class="card-body card_content">
+              <div class="reviewer">
+                <img
+                  class="reviewer-img-thumbnail"
+                  src="./resources/lateef.jpeg"
+                  alt="Lateef Raheem profile picture"
+                />
+                <h5 class="card-title">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/lateef-raheem-75577179/"
+                    >Lateef Raheem</a
+                  >
+                </h5>
+
+                <h6 class="card-subtitle mb-2 text-muted">
+                  Former student
+                </h6>
+              </div>
+              <p class="card-text review-quote">
+                When I started going to the University of California Davis, Coding boot camp, I had no experience in coding. But, instructor Nelly, was very creative and his lectures every day were interesting, fun, and filled with new concepts to learn. I always looked forward going to class every day, to learn the material as well as to get to know him as person. I have never met such a wonderful instructor who was willing to go above and beyond to help every one of his students. He is a very knowledgeable developer both on the frontend and on the backend. His lectures have always been very informative. Nelly is one of the best instructor I have ever had.
+Thank you Nelly.
+              </p>
+            </div>
+          </div>
+
+          <!-- Nicholas Scherer -->
+          <div class="card card_nicholas">
+            <div class="card-body card_content">
+              <div class="reviewer">
+                <img
+                  class="reviewer-img-thumbnail"
+                  src="./resources/nick-scherer.jpeg"
+                  alt="Nicholas Scherer profile picture"
+                />
+                <h5 class="card-title">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/nicholas-scherer/"
+                    >Nicholas Scherer</a
+                  >
+                </h5>
+
+                <p class="card-subtitle mb-2 fw-bold">
+                  Now: Founding Engineer @Lucky
+                </p>
+                <p class="card-subtitle mb-2 text-muted font-monospace">
+                  Before: Operations Manager 1st Lieutenant - US Army
+                </p>
+              </div>
+              <p class="card-text review-quote">
+                'Nelly is awesome' was a very common phrase said by myself and my classmates while he was our instructor at TLG Learning. He leaves absolutely nobody behind and is able to keep various level students engaged at the same time. Furthermore, Nelly demonstrated his expert knowledge of web development technologies to include but not limited to: HTML5, CSS, Javascript, Node.js, REST APIs, Bootstrap. I have developed my domain knowledge of software engineering, critical problem solving skills and exposure to new programming languages while I was a student of Nelly's. I fully endorse the decision to work or learn with Nelly in any Teaching or Software/Web Development environments and I endorse him even more as being a great person.
+              </p>
+            </div>
+          </div>
+          <!-- Clay Rawlins -->
+          <div class="card">
+            <div class="card-body card_content">
+              <div class="reviewer">
+                <img
+                  class="reviewer-img-thumbnail"
+                  src="./resources/clay-rawlins.jpeg"
+                  alt="Clay Rawlins profile picture"
+                />
+                <h5 class="card-title">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/clayvis-rawlins-28b93b11a/"
+                    >Clay Rawlins</a
+                  >
+                </h5>
+
+                <p class="card-subtitle mb-2 fw-bold">
+                  Now: Software Development Engineer @Amazon
+                </p>
+                <p class="card-subtitle mb-2 text-muted font-monospace">
+                  Before: Full Stack Developer @voto x voto
+                </p>
+              </div>
+              <p class="card-text review-quote">
+                Nelly blends the right balance of hard and soft skills for soliciting the best out of others. He is truly concerned with the personal and professional success of all—a consummate mentor—people both do and feel well after his coaching and instruction. Although our time together was brief, the impact and impression that Nelly left on myself and my peers during his instruction was truly meaningful. 
+                <br>
+                <br>
+                His expertise in JavaScript, HTML, CSS, React and app development is noteworthy. I do look forward to continue working with Nelly in the future.
+              </p>
+            </div>
+          </div>
+          <!-- Timothy Olowookere -->
+          <div class="card">
+            <div class="card-body card_content">
+              <div class="reviewer">
+                <img
+                  class="reviewer-img-thumbnail"
+                  src="./resources/timothy-olo.jpeg"
+                  alt="Timothy Olowookere profile picture"
+                />
+                <h5 class="card-title">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/timothy-olowookere-517265106/"
+                    >Timothy Olowookere</a
+                  >
+                </h5>
+
+                <p class="card-subtitle mb-2 fw-bold">
+                  Now: Software Development Engineer - Apprentice @Amazon
+                </p>
+                <p class="card-subtitle mb-2 text-muted font-monospace">
+                  Before: Cyber Security Specialist @LND
+                </p>
+              </div>
+              <p class="card-text review-quote">
+                The way Nelly simplified JavaScript, CSS and HTML within a short period of time was phenomenal. My team was able to build our first ever application within 4 weeks of learning from him. Nelly will tell you "give me your 100% and I'll double it for you" Thanks for laying a solid foundation for this junior Software Development Engineer!
+              </p>
+            </div>
+          </div>
+          
+          
+
+          <!-- Nico Cueva -->
           <div class="card">
             <div class="card-body card_content">
               <div class="reviewer">
@@ -422,9 +1250,12 @@
                   >
                 </h5>
 
-                <h6 class="card-subtitle mb-2 text-muted">
-                  AWS Solutions Architect, former student
-                </h6>
+                <p class="card-subtitle mb-2 fw-bold">
+                  Now: Cloud Enablement Principal @Slalom
+                </p>
+                <p class="card-subtitle mb-2 text-muted font-monospace">
+                  Before: Private Client Financial Consultant @JP Morgan Chase
+                </p>
               </div>
               <p class="card-text review-quote">
                 Nelly is everything you want in a teacher and mentor. He went
@@ -436,6 +1267,7 @@
               </p>
             </div>
           </div>
+          <!-- Steph -->
           <div class="card">
             <div class="card-body card_content">
               <div class="reviewer">
@@ -448,20 +1280,17 @@
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://www.linkedin.com/in/stephaniemustari/"
+                    href="https://www.linkedin.com/in/mufasaaa/"
                     >Stephanie Mustari</a
                   >
                 </h5>
 
-                <h6 class="card-subtitle mb-2 text-muted">
-                  Founder & Principal Consultant at
-                  <a
-                    href="https://www.mufasaaa.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Mufasa Media</a
-                  >, former student
-                </h6>
+                <p class="card-subtitle mb-2 fw-bold">
+                  Now: Owner @New Breed Athlete & Founder @Mufasa Media
+                </p>
+                <p class="card-subtitle mb-2 text-muted font-monospace">
+                  Before: Held leadership roles in Programmatic Media @Havas
+                </p>
               </div>
               <p class="card-text review-quote">
                 Nelly was my instructor at Northwestern University's Code
@@ -473,6 +1302,8 @@
               </p>
             </div>
           </div>
+          
+          <!-- Benjamin Dally -->
           <div class="card">
             <div class="card-body card_content">
               <div class="reviewer">
@@ -490,9 +1321,12 @@
                   >
                 </h5>
 
-                <h6 class="card-subtitle mb-2 text-muted">
-                  Fullstack Engineer, former student
-                </h6>
+                <p class="card-subtitle mb-2 fw-bold">
+                  Now: Software Engineer III @Outside
+                </p>
+                <p class="card-subtitle mb-2 text-muted font-monospace">
+                  Before: Teacher @Woodland High School
+                </p>
               </div>
               <p class="card-text review-quote">
                 I am very happy to recommend Nelly as an instructor, coder, and
@@ -508,6 +1342,7 @@
               </p>
             </div>
           </div>
+          <!-- Falon -->
           <div class="card card_falon">
             <div class="card-body card_content">
               <div class="reviewer">
@@ -525,9 +1360,12 @@
                   >
                 </h5>
 
-                <h6 class="card-subtitle mb-2 text-muted">
-                  Software Engineer, former student
-                </h6>
+                <p class="card-subtitle mb-2 fw-bold">
+                  Now: Software Engineer @Cisco
+                </p>
+                <p class="card-subtitle mb-2 text-muted font-monospace">
+                  Before: Content writer at <a href="https://falondarville.com/" target="_blank" rel="noopener noreferrer">falondarville.com</a>
+                </p>
               </div>
               <p class="card-text review-quote">
                 I was one of Nelly's students. Nelly is an unrelenting
@@ -553,6 +1391,8 @@
               </p>
             </div>
           </div>
+
+          <!-- Collin Goodale -->
           <div class="card">
             <div class="card-body card_content">
               <div class="reviewer">
@@ -565,14 +1405,17 @@
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://www.linkedin.com/in/colin-goodale-b551b379/"
+                    href="https://www.linkedin.com/in/colin-g-b551b379/"
                     >Collin Goodale</a
                   >
                 </h5>
 
-                <h6 class="card-subtitle mb-2 text-muted">
-                  Independent Fullstack Web Developer, former student
-                </h6>
+                <p class="card-subtitle mb-2 fw-bold">
+                  Now: Senior Software Lead @Touch To
+                </p>
+                <p class="card-subtitle mb-2 text-muted font-monospace">
+                  Before: Senior Account Manager @Breather
+                </p>
               </div>
               <p class="card-text review-quote">
                 I was a student of Nelly's in July of 2018. He was a wonderful
@@ -590,6 +1433,7 @@
               </p>
             </div>
           </div>
+          <!-- Haddassah -->
           <div class="card card_haddassah">
             <div class="card-body card_content">
               <div class="reviewer">
@@ -607,9 +1451,12 @@
                   >
                 </h5>
 
-                <h6 class="card-subtitle mb-2 text-muted">
-                  Web Developer, former student
-                </h6>
+                <p class="card-subtitle mb-2 fw-bold">
+                  Now: Web Development Teaching Assistant & Tutor @Trilogy Education Services
+                </p>
+                <p class="card-subtitle mb-2 text-muted font-monospace">
+                  Before: Office & Events Coordinator
+                </p>
               </div>
               <p class="card-text review-quote">
                 Nelly did not just teach me how to code, he opened an entire new
@@ -642,7 +1489,8 @@
               </p>
             </div>
           </div>
-          <div class="card">
+          <!-- Peter Kohler -->
+          <div class="card card_peter">
             <div class="card-body card_content">
               <div class="reviewer">
                 <img
@@ -659,9 +1507,12 @@
                   >
                 </h5>
 
-                <h6 class="card-subtitle mb-2 text-muted">
-                  Technical Analyst, former student
-                </h6>
+                <p class="card-subtitle mb-2 fw-bold">
+                  Now: Co-Founder @Prismatic
+                </p>
+                <p class="card-subtitle mb-2 text-muted font-monospace">
+                  Before: Associate Quality Assurance Engineer @Medline Industries
+                </p>
               </div>
               <p class="card-text review-quote">
                 When I think back to my time as a student in Nelly's
@@ -681,6 +1532,8 @@
               </p>
             </div>
           </div>
+
+          <!-- Vanessa -->
           <div class="card">
             <div class="card-body card_content">
               <div class="reviewer">
@@ -699,7 +1552,7 @@
                 </h5>
 
                 <h6 class="card-subtitle mb-2 text-muted">
-                  Junior Web Developer, former student
+                  Former student
                 </h6>
               </div>
               <p class="card-text review-quote">
@@ -711,6 +1564,7 @@
               </p>
             </div>
           </div>
+          <!-- Greg DeYoung -->
           <div class="card">
             <div class="card-body card_content">
               <div class="reviewer">
@@ -729,7 +1583,7 @@
                 </h5>
 
                 <h6 class="card-subtitle mb-2 text-muted">
-                  Java & Fullstack Developer, former student
+                  Former student
                 </h6>
               </div>
               <p class="card-text review-quote">
@@ -742,6 +1596,8 @@
               </p>
             </div>
           </div>
+
+          <!-- Holly Zoba -->
           <div class="card card_holy">
             <div class="card-body card_content">
               <div class="reviewer">
@@ -760,7 +1616,7 @@
                 </h5>
 
                 <h6 class="card-subtitle mb-2 text-muted">
-                  Owner - Influence Sales Training, former tutee
+                  Former tutee
                 </h6>
               </div>
               <p class="card-text review-quote">
@@ -791,58 +1647,7 @@
               </p>
             </div>
           </div>
-          <div class="card card_joe">
-            <div class="card-body card_content">
-              <div class="reviewer">
-                <img
-                  class="reviewer-img-thumbnail"
-                  src="./resources/joeplukarski.jpeg"
-                  alt="Joe profile picture"
-                />
-                <h5 class="card-title">
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://www.linkedin.com/in/josephplukarski/"
-                    >Joseph Plukarski</a
-                  >
-                </h5>
-
-                <h6 class="card-subtitle mb-2 text-muted">
-                  API Support Specialist, former student
-                </h6>
-              </div>
-              <p class="card-text review-quote">
-                I was Nelly's student from July 2018-October 2018 at the
-                Northwestern Full-Stack Coding Bootcamp. At the time, I was a
-                freelance blog writer and lyric transcriber and delivered for
-                Postmates. I was desperately looking for a career change. I had
-                managed websites via WordPress before, but had no experience
-                with coding outside of very basic HTML and CSS. When first
-                making this transition into the world of web developing it can
-                be very overwhelming. There are so many acronyms, libraries,
-                frameworks, languages out there that imposter syndrome is nearly
-                impossible to avoid. Nelly not only taught us how to code, but
-                he taught us patience and perseverance. I saw firsthand Nelly
-                get excited over error messages or scripts not working as
-                expected. This helped me change my mindset from being
-                intimidated and frustrated when things don't work as expected to
-                being excited at opportunities to solve problems through
-                debugging code.
-                <br />
-                <br />
-                I originally went to college to become a High School English
-                Teacher. I quickly decided that I did not have a passion for
-                teaching, but this same passion that I lacked I can clearly see
-                in Nelly. He takes his time to get to know his students
-                individually and what motivates them, and how they best learn.
-                He also approaches the classroom more like getting together with
-                a friend who is showing you something. I really appreciated
-                everything Nelly did for us and would take another class with
-                him 10/10 times if given the opportunity!
-              </p>
-            </div>
-          </div>
+          <!-- Shauna Ono -->
           <div class="card">
             <div class="card-body card_content">
               <div class="reviewer">
@@ -861,7 +1666,7 @@
                 </h5>
 
                 <h6 class="card-subtitle mb-2 text-muted">
-                  Web Designer, Social Media Manager, former student
+                  Former student
                 </h6>
               </div>
               <p class="card-text review-quote">
@@ -879,6 +1684,7 @@
               </p>
             </div>
           </div>
+          <!-- Yelena -->
           <div class="card">
             <div class="card-body card_content">
               <div class="reviewer">
@@ -897,7 +1703,7 @@
                 </h5>
 
                 <h6 class="card-subtitle mb-2 text-muted">
-                  Full-stack Web Developer, former student
+                  Former student
                 </h6>
               </div>
               <p class="card-text review-quote">
@@ -911,6 +1717,7 @@
               </p>
             </div>
           </div>
+          <!-- Eran Dromy -->
           <div class="card">
             <div class="card-body card_content">
               <div class="reviewer">
@@ -928,9 +1735,12 @@
                   >
                 </h5>
 
-                <h6 class="card-subtitle mb-2 text-muted">
-                  Haptic Designer, former student
-                </h6>
+                <p class="card-subtitle mb-2 fw-bold">
+                  Now: Software Developer & Haptic Designer @Tanvas
+                </p>
+                <p class="card-subtitle mb-2 text-muted font-monospace">
+                  Before: Freelance Graphic Designer
+                </p>
               </div>
               <p class="card-text review-quote">
                 I consider myself lucky to have had Nelly Sugu as an instructor
@@ -944,6 +1754,7 @@
               </p>
             </div>
           </div>
+          <!-- Chris Grant -->
           <div class="card card_chris">
             <div class="card-body card_content">
               <div class="reviewer">
@@ -961,9 +1772,12 @@
                   >
                 </h5>
 
-                <h6 class="card-subtitle mb-2 text-muted">
-                  Director of Project Management, former student
-                </h6>
+                <p class="card-subtitle mb-2 fw-bold">
+                  Now: Senior Project Manager @Digital Management, LLC
+                </p>
+                <p class="card-subtitle mb-2 text-muted font-monospace">
+                  Before: Director of Project Management @Dimension Design
+                </p>
               </div>
               <p class="card-text review-quote">
                 I walked into Northwestern University's Coding Boot Camp in 2018
@@ -991,6 +1805,7 @@
               </p>
             </div>
           </div>
+          <!-- Madhav -->
           <div class="card">
             <div class="card-body card_content">
               <div class="reviewer">
@@ -1008,9 +1823,12 @@
                   >
                 </h5>
 
-                <h6 class="card-subtitle mb-2 text-muted">
-                  Lead Software Engineer, former student
-                </h6>
+                <p class="card-subtitle mb-2 fw-bold">
+                  Now: Applications Programmer @UC Davis
+                </p>
+                <p class="card-subtitle mb-2 text-muted font-monospace">
+                  Before: Freelance Software Engineer
+                </p>
               </div>
               <p class="card-text review-quote">
                 As an Instructor, Nelly has amazing ability to break down
@@ -1022,6 +1840,7 @@
             </div>
           </div>
 
+          <!-- Sherif -->
           <div class="card card_sherif">
             <div class="card-body card_content">
               <div class="reviewer">
@@ -1038,9 +1857,12 @@
                     >Sherif Mahmoud
                   </a>
                 </h5>
-                <h6 class="card-subtitle mb-2 text-muted">
-                  Software Consultant, former student
-                </h6>
+                <p class="card-subtitle mb-2 fw-bold">
+                  Now: Software Consultant @ThoughtWorks
+                </p>
+                <p class="card-subtitle mb-2 text-muted font-monospace">
+                  Before: Senior Software Engineer @ASSET Technology Group
+                </p>
               </div>
               <p class="card-text review-quote">
                 Nelly is an amazing Instructor. I was his student for 3 months
@@ -1062,7 +1884,7 @@
               </p>
             </div>
           </div>
-
+          <!-- Max -->
           <div class="card">
             <div class="card-body card_content">
               <div class="reviewer">
@@ -1080,9 +1902,12 @@
                   >
                 </h5>
 
-                <h6 class="card-subtitle mb-2 text-muted">
-                  Fullstack Web Developer, former student
-                </h6>
+                <p class="card-subtitle mb-2 fw-bold">
+                  Now: Web Developer @Zennify
+                </p>
+                <p class="card-subtitle mb-2 text-muted font-monospace">
+                  Before: Sales @Toyota
+                </p>
               </div>
               <p class="card-text review-quote">
                 Nelly has a great ability to teach complex things in
@@ -1092,7 +1917,7 @@
               </p>
             </div>
           </div>
-
+          <!-- Daniel Feinstat -->
           <div class="card">
             <div class="card-body card_content">
               <div class="reviewer">
@@ -1110,9 +1935,12 @@
                   >
                 </h5>
 
-                <h6 class="card-subtitle mb-2 text-muted">
-                  Software Engineer, former student
-                </h6>
+                <p class="card-subtitle mb-2 fw-bold">
+                  Now: Senior Software Engineer @eHealth, Inc
+                </p>
+                <p class="card-subtitle mb-2 text-muted font-monospace">
+                  Before: College student
+                </p>
               </div>
               <p class="card-text review-quote">
                 Nelly is a talented teacher and mentor. He has a gift for
@@ -1123,6 +1951,8 @@
               </p>
             </div>
           </div>
+
+          <!-- Andy Wood -->
           <div class="card">
             <div class="card-body card_content">
               <div class="reviewer">
@@ -1140,9 +1970,12 @@
                   >
                 </h5>
 
-                <h6 class="card-subtitle mb-2 text-muted">
-                  Web Developer, former student
-                </h6>
+                <p class="card-subtitle mb-2 fw-bold">
+                  Now: Software Engineer @Audit Sight Inc.
+                </p>
+                <p class="card-subtitle mb-2 text-muted font-monospace">
+                  Before: Genius Bar @Apple
+                </p>
               </div>
               <p class="card-text review-quote">
                 Nelly was my instructor at Northwestern University's Coding
@@ -1155,34 +1988,9 @@
               </p>
             </div>
           </div>
-          <!-- <div class="card" style="height:fit-content;">
-          <div class="card-body card_content">
-            <div class="reviewer">
-              <img class="reviewer-img-thumbnail"
-                src="https://media-exp1.licdn.com/dms/image/C5103AQGsTqWSqP6vuQ/profile-displayphoto-shrink_800_800/0?e=1587600000&v=beta&t=i1iDcqSz1unIf6phq2-bK8KpgovzE26Xhk0K2jsi7NY"
-                alt="Jeffrey Lafazan profile picture">
-              <h5 class="card-title">
-                <a target="_blank" rel="noopener noreferrer"
-                  href="https://www.linkedin.com/in/jeffrey-lafazan-33981857/">Jeffrey Lafazan</a>
-              </h5>
 
-              <h6 class="card-subtitle mb-2 text-muted">
-                Telecom Engineer, former student
-              </h6>
-            </div>
-            <p class="card-text review-quote">
-              Nelly is an awesome Full Stack Instructor. He has both great technical knowledge of the subject and the
-              demeanor to patiently guide us through the learning curve of Full Stack Development. I enjoy every class
-              he
-              instructs. He shares such wonderful positivity and encouragement that keeps everyone in the class
-              motivated
-              and challenged. Nelly is a genuinely kind person and has the character every manager and leader should
-              have.
-              He is a true asset and I couldn't have found a better instructor for Full Stack Development.
-            </p>
-          </div>
-        </div> -->
-
+          <!-- Co-workers -->
+          <!-- Joseph Lee -->
           <div class="card card_lee">
             <div class="card-body card_content">
               <div class="reviewer">
@@ -1201,7 +2009,7 @@
                 </h5>
 
                 <h6 class="card-subtitle mb-2 text-muted">
-                  Software Engineer, former co-worker
+                  Senior Software Engineer @BitSight, former co-worker @Wayfair
                 </h6>
               </div>
               <p class="card-text review-quote">
@@ -1227,6 +2035,98 @@
               </p>
             </div>
           </div>
+
+          <!-- Jonathon Hinchley -->
+          <div class="card">
+            <div class="card-body card_content">
+              <div class="reviewer">
+                <img
+                  class="reviewer-img-thumbnail"
+                  src="./resources/jonathon-hinchley.jpeg"
+                  alt="Jonathon Hinchley profile picture"
+                />
+                <h5 class="card-title">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/jonathon-hinchley/"
+                    >Jonathon Hinchley</a>
+                </h5>
+
+                <h6 class="card-subtitle mb-2 text-muted">
+                  Software Engineer 2 @CarMax, former
+                  co-worker
+                </h6>
+              </div>
+              <p class="card-text review-quote">
+                Nelly is one of the best leaders I have had the pleasure of working for. He is passionate about impacting lives (happy to say I've impacted 35 students through his mentoring) is so inspiring to me. When I first read his story on LinkedIn I knew I wanted the chance to work with him.
+                <br>
+                <br>
+                Nelly really exemplifies the qualities of servant leadership where everything he does is meant to enable the people that work in his teams. I don't really feel like I'm working for Nelly but that we are working on a team that aligns with his vision. Nelly constantly practices a growth mindset and enables instructors and students alike through being open to new ideas and processes. 
+              </p>
+            </div>
+          </div>
+          <!-- Stan Crump -->
+          <div class="card card_stan">
+            <div class="card-body card_content">
+              <div class="reviewer">
+                <img
+                  class="reviewer-img-thumbnail"
+                  src="./resources/stan-crump.jpeg"
+                  alt="Stan Crump profile picture"
+                />
+                <h5 class="card-title">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/stan-crump-freelancer/"
+                    >Stan Crump</a>
+                </h5>
+
+                <h6 class="card-subtitle mb-2 text-muted">
+                  Software Engineer 2 @CarMax, former
+                  co-worker
+                </h6>
+              </div>
+              <p class="card-text review-quote">
+                I met Nelly a little less than a year ago. He is so energized about life. He seeks accomplishments, not only for himself but for those around him. He sincerely cares about other people and spends his energy building successes.
+                <br>
+                <br>
+                Considering that he is from a country where computers are something others have, he has built a technology (and education) career that surpasses the vast majority of the people I know and work with that grew up around technology. His success comes from the work he's put into learning and sharing with others. 
+                He is an living example of "you can do anything you put your mind to".
+                He has encouraged me to tackle a new career teaching software development at the college level. My new career comes from Nelly's encouragement and passion for helping others be the best they can be. 
+              </p>
+            </div>
+          </div>
+
+          <!-- Michael Doherty -->
+          <div class="card">
+            <div class="card-body card_content">
+              <div class="reviewer">
+                <img
+                  class="reviewer-img-thumbnail"
+                  src="./resources/placeholder.png"
+                  alt="Michael Doherty profile picture"
+                />
+                <h5 class="card-title">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/michaeldoh/"
+                    >Michael Doherty</a>
+                </h5>
+
+                <h6 class="card-subtitle mb-2 text-muted">
+                  Full Stack Developer & Educator, former
+                  co-worker
+                </h6>
+              </div>
+              <p class="card-text review-quote">
+                I had the pleasure of working in a support role for Nelly during his time at Northwestern Coding boot camp. Nelly had an amazing ability to engage and energize students. His passion and enthusiasm for code, teaching, and life was absolutely contagious. Nelly played a big part in inspiring me to pursue my own career in teaching. I'm very thankful to have had the opportunity to work with him!
+              </p>
+            </div>
+          </div>
+          <!-- Leo -->
           <div class="card">
             <div class="card-body card_content">
               <div class="reviewer">
@@ -1245,7 +2145,7 @@
                 </h5>
 
                 <h6 class="card-subtitle mb-2 text-muted">
-                  Co-Founder of
+                  Co-Founder @
                   <a
                     href="https://foodnome.com/"
                     target="_blank"
@@ -1263,6 +2163,7 @@
               </p>
             </div>
           </div>
+          <!-- Treighton -->
           <div class="card">
             <div class="card-body card_content">
               <div class="reviewer">
@@ -1281,7 +2182,7 @@
                 </h5>
 
                 <h6 class="card-subtitle mb-2 text-muted">
-                  Web Development Instructor & Fullstack Developer, former
+                  Senior Software Engineer @Pantheon Platform, former
                   co-worker
                 </h6>
               </div>
@@ -1295,6 +2196,8 @@
               </p>
             </div>
           </div>
+
+          <!-- Jordan -->
           <div class="card">
             <div class="card-body card_content">
               <div class="reviewer">
@@ -1313,7 +2216,7 @@
                 </h5>
 
                 <h6 class="card-subtitle mb-2 text-muted">
-                  Systems Engineer & Community Organizer, former co-worker
+                  Software Engineer @Landis, former co-worker
                 </h6>
               </div>
               <p class="card-text review-quote">
@@ -1332,6 +2235,7 @@
               </p>
             </div>
           </div>
+          <!-- Ryan Canty -->
           <div class="card">
             <div class="card-body card_content">
               <div class="reviewer">
@@ -1350,7 +2254,7 @@
                 </h5>
 
                 <h6 class="card-subtitle mb-2 text-muted">
-                  Cloud Engineer, former classmate
+                  Cloud Security Engineer @Confidential, former classmate
                 </h6>
               </div>
               <p class="card-text review-quote">
@@ -1365,171 +2269,13 @@
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!--Projects-->
-    <!-- <section id="projects">
-      <h2 class="section-header">Projects I am proud of</h2>
-      <div class="section-carousel">
-        <div id="projects-container">
-          <div class="card">
-            <iframe
-              width="100%"
-              height="315"
-              src="https://www.youtube.com/embed/621M4TeexBQ"
-              frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-            <div class="card-body card_content">
-              <h5 class="card-title project-title">
-                Coding ZeroTo100 YouTube channel
-              </h5>
-              <p class="card-text project-description">
-                The YouTube channel for beginners to learn how to make web and
-                mobile apps from scratch.
-              </p>
-              <div class="project-call-to-action">
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://www.youtube.com/channel/UC9t-XaHAaBVQZqNJU27uIxw"
-                  class="btn btn-primary"
-                  >Check it out</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <img
-              src="https://images.squarespace-cdn.com/content/v1/5c322037f2e6b1bd0e63a645/1561942225074-FDU8HJYMJ4U7AQ7A4QS8/ke17ZwdGBToddI8pDm48kLPswmMOqQZ9-Q6KHLjvbpZ7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UcaEU9usEQgaPMYSSHCLDdjcUDfwtSR5qjoqJbWx-aCIZDqXZYzu2fuaodM4POSZ4w/check_in-1.png"
-              class="card-img-top"
-              alt="BRIM Basketball app screenshot"
-            />
-            <div class="card-body card_content">
-              <h5 class="card-title project-title">BRIM Basketball iOS app</h5>
-              <p class="card-text project-description">
-                The BRIM Basketball mobile app revolutionizes how you connect
-                and interact with the basketball world around you.
-              </p>
-              <div class="project-call-to-action">
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://apps.apple.com/us/app/brim-basketball/id1449649789"
-                  class="btn btn-primary"
-                  >Download</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="card project-card">
-            <img
-              src="https://pbs.twimg.com/profile_images/779466776728002560/kqZjcCPm_400x400.jpg"
-              class="card-img-top"
-              alt="Amaturufu iOS app image"
-            />
-            <div class="card-body card_content">
-              <h5 class="card-title project-title">Amaturufu game iOS app</h5>
-              <p class="card-text project-description">
-                Amaturufu is a famous card game in Rwanda
-              </p>
-              <div class="project-call-to-action">
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://apps.apple.com/us/app/amaturufu/id1070901538"
-                  class="btn btn-primary"
-                  >Download</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="card project-card">
-            <img
-              src="https://pbs.twimg.com/media/DFddNamXoAEYOwy.jpg:small"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body card_content">
-              <div class="project-call-to-action">
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://apps.apple.com/us/app/250moji/id1221577636"
-                  class="btn btn-primary"
-                  >Download</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="card project-card">
-            <img
-              src="https://lh3.googleusercontent.com/xgFQmaqRyM53vsMDUWcx3_IZlvM2mPB4zHEc8WROZYl_2SEL_LZRjWIETW4l4ywc_O9m4WB-CHguH8p8_75K1_HlsCE_Om4HQ6-SOBk=s660"
-              class="card-img-top"
-              alt="Burning man doodle"
-            />
-            <div class="card-body card_content">
-              <h5 class="card-title project-title">Gooddlistory</h5>
-              <p class="card-text project-description">
-                Google Doodles history starts on 1998/8/30 when Google's
-                founders, Larry Page and Sergey Brin, designed the first Google
-                Doodle to let Google users at the time that Larry and Sergey
-                were at the Burning Man Festival, just in case the servers
-                crashed :). Ever since, Google has been designing Google Doodles
-                to celebrate different people and events through out history.
-                <br /><br />
-                Having always been intrigued by them, naturally, I built a web
-                app that can go back into history and tell you which Google
-                Doodle was used on which date.
-              </p>
-              <div class="project-call-to-action">
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://jonly03.github.io/Gooddlistory/"
-                  class="btn btn-primary"
-                  >What in the doodle?</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
-    <!--Contact-->
-    <section id="contact">
-      <h2 class="section-header">Learn with me</h2>
-      <div id="contact-container">
-        <iframe
-          id="google-doc"
-          src="https://docs.google.com/forms/d/e/1FAIpQLSffD7RHfTutiFv_eFS32Ao2MWJo4x9vSCAxiacqCKf0babnrQ/viewform?embedded=true"
-          width="100%"
-          height="2200"
-          frameborder="0"
-          marginheight="0"
-          marginwidth="0"
-          >Loading…</iframe
-        >
-      </div>
+      <!-- </div> -->
     </section>
 
     <!-- Bootstrap JS-->
     <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
       crossorigin="anonymous"
     ></script>
 
