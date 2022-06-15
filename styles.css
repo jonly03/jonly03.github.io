@@ -83,16 +83,30 @@ body {
   height: 2rem;
 }
 
-.learn_call_to_action {
+.numbers {
   position: absolute;
   height: fit-content;
   bottom: 0;
   margin: 0.7rem auto;
-  border-radius: 30px;
   border-color: white;
   display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.number {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 1px solid;
+  display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  align-items: center;
+}
+
+.number_desc {
+  text-align: center;
 }
 
 #testimonials,
@@ -209,5 +223,17 @@ body {
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .numbers {
+    flex-direction: column;
+    /* position: static; */
+  }
+
+  .number {
+    height: fit-content;
+    border: none;
   }
 }
