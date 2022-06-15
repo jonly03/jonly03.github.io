@@ -83,7 +83,7 @@ body {
   height: 2rem;
 }
 
-.numbers {
+.cta {
   position: absolute;
   height: fit-content;
   bottom: 0;
@@ -223,17 +223,5 @@ body {
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .numbers {
-    flex-direction: column;
-    /* position: static; */
-  }
-
-  .number {
-    height: fit-content;
-    border: none;
   }
 }
