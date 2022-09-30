@@ -1,5 +1,9 @@
 * {
   box-sizing: border-box;
+  --bs-alert-color: white !important;
+  --bs-alert-bg: #fc9c84 !important;
+  --bs-alert-border-color: #fc9c84 !important;
+  --bs-link-color: white !important;
 }
 
 html {
@@ -8,6 +12,10 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
 }
 
 #nav-bar {
