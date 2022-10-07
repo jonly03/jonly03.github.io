@@ -95,7 +95,7 @@ a {
   position: absolute;
   height: fit-content;
   bottom: 0;
-  margin: 0.7rem auto;
+  margin: auto;
   border-color: white;
   display: flex;
   justify-content: space-evenly;
