@@ -28,8 +28,10 @@
     />
 
     <!--Google Font CSS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css?family=Raleway+Dots|Roboto&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Outfit:wght@400;500;600;700&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap"
       rel="stylesheet"
     />
 
@@ -41,86 +43,77 @@
 
   <body>
     <!--Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="nav-bar">
-      <div class="navbar-brand" id="brand-container">
-        <a style="color: white; text-decoration: none" href="#">
-          <p>Nelly Sugu</p>
-          <p id="brand-work">
-            Mentor & coach of absolute beginners in web development
-          </p>
-        </a>
-      </div>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <nav class="navbar navbar-expand-lg navbar-light site-nav" id="nav-bar">
+      <div class="nav-shell">
+        <div class="navbar-brand" id="brand-container">
+          <a class="brand-link" href="#">
+            <span class="brand-name">Nelly Sugu</span>
+          </a>
+        </div>
 
-      <div
-        class="collapse navbar-collapse justify-content-end menu_items"
-        id="navbarSupportedContent"
-      >
-        <ul class="navbar-nav ml-auto">
-          <!-- <li class="nav-item">
-            <a class="nav-link" href="#">About </a>
-          </li> -->
-          <li class="nav-item">
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              class="nav-link"
-              href="#testimonials"
-              >Testimonials</a
-            >
-          </li>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-          <li>
-            <a
-              class="nav-link"
-              href="https://blog.nellysugu.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Blog</a
-            >
-          </li>
-
-          <li class="nav-item">
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              class="nav-link"
-              href="https://www.linkedin.com/in/nellysugu/"
-              >LinkedIn</a
-            >
-          </li>
-        </ul>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav nav-menu">
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonials">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link nav-link-cta"
+                href="https://blog.nellysugu.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Blog</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://www.linkedin.com/in/nellysugu/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >LinkedIn</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
 
     <!--About-->
     <section id="about">
-      <!-- <p class="about-name">Hi,</p>
-      <p class="about-name">I am Nelly</p> -->
-      <p id="about-tagline">
-        I <span id="about-heart">&hearts;</span> building cool stuff & teaching
-        others how to do it
-      </p>
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <!-- <p class="about-name">Hi,</p>
+        <p class="about-name">I am Nelly</p> -->
+        <p class="hero-eyebrow">Nelly Sugu</p>
+        <h1 id="about-tagline">
+          I <span id="about-heart">&hearts;</span> building cool stuff &amp;
+          teaching others how to do it
+        </h1>
+        <p class="hero-lead">
+          Mentor &amp; coach of absolute beginners in web development
+        </p>
 
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/giRJQ-f4wlA"
-        title="Web Developer Beginner Series by Nelly Sugu"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
+        <div class="hero-video-wrap">
+          <iframe
+            src="https://www.youtube.com/embed/giRJQ-f4wlA"
+            title="Web Developer Beginner Series by Nelly Sugu"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
 
       <div id="about-social-media">
         <!-- <a
@@ -159,14 +152,14 @@
         </div>
       </div> -->
       <div class="cta">
-        <div class="alert alert-success" role="alert">
-          <a
-            href="https://blog.nellysugu.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Learn with Nelly 🎓</a
-          >
-        </div>
+        <a
+          class="hero-cta"
+          href="https://blog.nellysugu.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Learn with Nelly 🎓</a
+        >
+      </div>
       </div>
 
       <!-- <div class="learn_call_to_action">
@@ -189,7 +182,11 @@
 
     <!--Reviews-->
     <section id="testimonials">
-      <h2 class="section-header">Testimonials</h2>
+      <div class="testimonials-inner">
+        <header class="section-intro reveal">
+          <h2 class="section-header">Testimonials</h2>
+          <div class="section-header-accent" aria-hidden="true"></div>
+        </header>
       <!-- <div class="section-carousel"> -->
       <div id="testimonials-container">
         <!-- Joe Plukarski -->
@@ -198,6 +195,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/joeplukarski.jpeg"
                 alt="Joe profile picture"
               />
@@ -257,6 +256,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/percell-gaskins.jpeg"
                 alt="Parcell Gaskins profile picture"
               />
@@ -291,6 +292,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/ifra.jpeg"
                 alt="Ifra profile picture"
               />
@@ -337,6 +340,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/izzy.jpeg"
                 alt="Isabel Servin profile picture"
               />
@@ -379,6 +384,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/walter-thomas.jpeg"
                 alt="Walter Thomas profile picture"
               />
@@ -414,6 +421,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/morgan.jpeg"
                 alt="Morgan profile picture"
               />
@@ -454,6 +463,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/kevin.jpeg"
                 alt="Kevin profile picture"
               />
@@ -492,6 +503,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/justin-bruce.jpeg"
                 alt="Justin Bruce profile picture"
               />
@@ -529,6 +542,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/maria-nieves.jpeg"
                 alt="Maria Nieves profile picture"
               />
@@ -563,6 +578,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/charlie.jpeg"
                 alt="Charlie profile picture"
               />
@@ -605,6 +622,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/brit-nell.jpeg"
                 alt="Brit Nell profile picture"
               />
@@ -641,6 +660,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/roman-penn.jpeg"
                 alt="Roman Penn profile picture"
               />
@@ -678,6 +699,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/luxi-meng.jpeg"
                 alt="Luxi Meng profile picture"
               />
@@ -716,6 +739,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/henwin.jpeg"
                 alt="Henwin Cuffy profile picture"
               />
@@ -752,6 +777,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/shannon.jpeg"
                 alt="Shannon profile picture"
               />
@@ -792,6 +819,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/jackson.jpeg"
                 alt="Jackson profile picture"
               />
@@ -835,6 +864,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/michelle.jpeg"
                 alt="Michelle Jung profile picture"
               />
@@ -898,6 +929,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/samekh-resh.jpeg"
                 alt="Samekh Resh profile picture"
               />
@@ -950,6 +983,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/michael-mirk.jpeg"
                 alt="Michael Mirkovic profile picture"
               />
@@ -987,6 +1022,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/kathy-le.jpeg"
                 alt="Kathy Le profile picture"
               />
@@ -1020,6 +1057,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/ibrahim-gurhan.jpeg"
                 alt="Ibrahim Gurhan profile picture"
               />
@@ -1065,6 +1104,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/sterling-meri.jpeg"
                 alt="Sterling Meriweather profile picture"
               />
@@ -1100,6 +1141,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/danny-manandhar.jpeg"
                 alt="Danny Manandhar profile picture"
               />
@@ -1134,6 +1177,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/anthony-johnson.jpeg"
                 alt="Anthony Johnson profile picture"
               />
@@ -1176,6 +1221,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/kelson-smith.jpeg"
                 alt="Kelson Smith profile picture"
               />
@@ -1212,6 +1259,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/sarah-lichy.jpeg"
                 alt="Sarah Lichy profile picture"
               />
@@ -1248,6 +1297,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/samuel-holtzman.jpeg"
                 alt="Samuel Holtzman profile picture"
               />
@@ -1287,6 +1338,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/lateef.jpeg"
                 alt="Lateef Raheem profile picture"
               />
@@ -1324,6 +1377,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/nick-scherer.jpeg"
                 alt="Nicholas Scherer profile picture"
               />
@@ -1366,6 +1421,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/clay-rawlins.jpeg"
                 alt="Clay Rawlins profile picture"
               />
@@ -1408,6 +1465,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/timothy-olo.jpeg"
                 alt="Timothy Olowookere profile picture"
               />
@@ -1445,6 +1504,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/nico.jpeg"
                 alt="Nico Cueva profile picture"
               />
@@ -1481,6 +1542,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/stephanie.jpeg"
                 alt="Stephanie profile picture"
               />
@@ -1518,6 +1581,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/benjamin.jpeg"
                 alt="Benjamin Dally profile picture"
               />
@@ -1557,6 +1622,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/falon.jpeg"
                 alt="Falon profile picture"
               />
@@ -1611,6 +1678,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/colin.jpeg"
                 alt="Collin profile picture"
               />
@@ -1652,6 +1721,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/haddassah.jpeg"
                 alt="Haddassah profile picture"
               />
@@ -1708,6 +1779,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/peter.jpeg"
                 alt="Peter profile picture"
               />
@@ -1752,6 +1825,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/vanessa.jpeg"
                 alt="Vanessa profile picture"
               />
@@ -1782,6 +1857,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/greg.jpeg"
                 alt="Greg profile picture"
               />
@@ -1814,6 +1891,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/hollyzoba.jpeg"
                 alt="Holly profile picture"
               />
@@ -1863,6 +1942,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/placeholder.png"
                 alt="Shauna profile picture"
               />
@@ -1899,6 +1980,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/yelena.jpeg"
                 alt="Yelena profile picture"
               />
@@ -1931,6 +2014,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/eran.jpeg"
                 alt="Eran profile picture"
               />
@@ -1969,6 +2054,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/chrisgrant.jpeg"
                 alt="Chris profile picture"
               />
@@ -2020,6 +2107,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/madhav.jpeg"
                 alt="Madhav profile picture"
               />
@@ -2056,6 +2145,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/sherif.jpeg"
                 alt="Sherif Mahmoud profile picture"
               />
@@ -2101,6 +2192,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/maksym.jpeg"
                 alt="Max profile picture"
               />
@@ -2135,6 +2228,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/dan.jpeg"
                 alt="Daniel Feinstat profile picture"
               />
@@ -2171,6 +2266,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/andywood.jpeg"
                 alt="Andy Wood profile picture"
               />
@@ -2210,6 +2307,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/josephlee.jpeg"
                 alt="Joe profile picture"
               />
@@ -2257,6 +2356,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/jonathon-hinchley.jpeg"
                 alt="Jonathon Hinchley profile picture"
               />
@@ -2297,6 +2398,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/stan-crump.jpeg"
                 alt="Stan Crump profile picture"
               />
@@ -2341,6 +2444,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/placeholder.png"
                 alt="Michael Doherty profile picture"
               />
@@ -2375,6 +2480,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/leoqiu.jpeg"
                 alt="Leo profile picture"
               />
@@ -2413,6 +2520,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/treighton.jpeg"
                 alt="Treighton profile picture"
               />
@@ -2446,6 +2555,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/jordan.jpeg"
                 alt="Jordan profile picture"
               />
@@ -2485,6 +2596,8 @@
             <div class="reviewer">
               <img
                 class="reviewer-img-thumbnail"
+                loading="lazy"
+                decoding="async"
                 src="./resources/ryancanty.jpeg"
                 alt="Ryan profile picture"
               />
@@ -2514,14 +2627,64 @@
         </div>
       </div>
       <!-- </div> -->
+      </div>
     </section>
 
-    <!-- jQuery JS -->
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
+    <footer
+      id="site-footer"
+      class="site-footer"
+      data-david-linkedin="https://www.linkedin.com/in/davidirankunda/"
+    >
+      <div class="footer-bg-name" aria-hidden="true">NELLY SUGU</div>
+      <div class="footer-inner">
+        <div class="footer-main">
+          <div class="footer-brand">
+            <p class="footer-brand-name">Nelly Sugu</p>
+            <p class="footer-brand-tagline">
+              Mentor &amp; coach of absolute beginners in web development
+            </p>
+          </div>
+          <nav class="footer-nav" aria-label="Footer">
+            <a class="footer-nav-link" href="#testimonials">Testimonials</a>
+            <a
+              class="footer-nav-link"
+              href="https://blog.nellysugu.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Blog</a
+            >
+            <a
+              class="footer-nav-link"
+              href="https://www.linkedin.com/in/nellysugu/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+          </nav>
+        </div>
+        <div class="footer-bottom">
+          <p class="footer-copy">
+            &copy; <span id="footer-year"></span> Nelly Sugu
+          </p>
+          <p
+            id="footer-credit"
+            class="site-footer-credit"
+            hidden
+            aria-hidden="true"
+          >
+            Updated by
+            <a
+              class="site-footer-link"
+              href="https://www.linkedin.com/in/davidirankunda/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >David Irankunda</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
     <!-- Bootstrap JS-->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
