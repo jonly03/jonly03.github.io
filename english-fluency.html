@@ -47,6 +47,9 @@
   details p { margin-top:8px; font-size:15px; }
   footer { margin-top:48px; padding-top:20px; border-top:1px solid var(--line); font-size:13px; color:var(--muted); text-align:center; }
   .t-quote { font-size:16px; }
+  .t-head { display:flex; gap:14px; align-items:center; margin-bottom:6px; }
+  .t-name { color:var(--ink); font-size:17px; display:block; }
+  .t-cred { font-size:13px; color:var(--muted); display:block; margin-top:2px; }
   .note { font-size:13px; color:var(--muted); background:#14120f; border:1px dashed var(--line); border-radius:10px; padding:10px 14px; margin-top:8px; }
   .week { display:flex; gap:12px; padding:12px 0; border-bottom:1px solid var(--line); }
   .week:last-child { border-bottom:none; }
@@ -106,21 +109,18 @@
 
 
   <h2>What clients say</h2>
-  <details open>
-    <summary>I freeze when I have to speak English. Is this for me?</summary>
-    <p class="t-quote" style="font-style:italic;color:var(--ink);margin-top:8px;">&ldquo;When this month began, my biggest frustration was confidence &mdash; proving to myself that I can read, understand, process, and express information in English. A month ago I had no confidence speaking with friends or co-workers. Now I feel comfortable communicating with my co-workers and patients. I&rsquo;m starting to believe in myself more.&rdquo;</p>
-    <p style="font-size:13px;margin-top:6px;">&mdash; Anonymous, coaching client</p>
-  </details>
-  <details>
-    <summary>Does the daily voice-note homework actually work?</summary>
-    <p class="t-quote" style="font-style:italic;color:var(--ink);margin-top:8px;">&ldquo;The voice-note homework and the feedback moved the needle the most for me. It gave me a chance to practice speaking regularly, organize my thoughts, and get comfortable expressing myself in English. The feedback showed me what I did perfectly and what to work on. I know that at the end of the day I have to speak English and think about what I&rsquo;m going to talk about &mdash; that itself helps me improve.&rdquo;</p>
-    <p style="font-size:13px;margin-top:6px;">&mdash; Anonymous, coaching client</p>
-  </details>
-  <details>
-    <summary>What kind of progress will I see in a month?</summary>
-    <p class="t-quote" style="font-style:italic;color:var(--ink);margin-top:8px;">&ldquo;I read more than five pages of a book in English and understood what I had read. I also watched a movie from the beginning to the end and gave a summary of the entire movie. A month ago that was a big, big challenge. Now I&rsquo;m excited just to take a book and read. There is a big change for me.&rdquo;</p>
-    <p style="font-size:13px;margin-top:6px;">&mdash; Anonymous, coaching client</p>
-  </details>
+  <div class="card">
+    <span class="tag">Consistency &bull; Productivity &bull; Accountability</span>
+    <div class="t-head" style="margin-top:10px;">
+      <div>
+        <strong class="t-name">Anonymous</strong>
+        <span class="t-cred">English fluency + performance coaching client, Canada</span>
+      </div>
+    </div>
+    <p class="t-quote">&ldquo;You gave me more structure than I had before, and that really helped me a lot. The deadlines made the difference &mdash; I have to do this today, so I&rsquo;ll not skip a day without sending a voice note. Your structure, your deadlines pushed me to actually do work. Honestly, I couldn&rsquo;t have handled this month the same way on my own.&rdquo;</p>
+    <p class="t-quote">&ldquo;This month with Nelly was really about changing my life. You helped me see that I can change my life and become the person I want to be &mdash; to know that I can speak, even when I wasn&rsquo;t confident. I can see what I want in my future, and I&rsquo;m working on it right now. I feel like this is only the beginning.&rdquo;</p>
+    <p class="t-quote">&ldquo;There is something I know I cannot miss. I cannot sleep without sending [my voice note]. This month helped me start becoming the person I want to be.&rdquo;</p>
+  </div>
 
   <h2>Pay your way</h2>
   <p style="margin-bottom:14px">Pick the rail that fits where you live. Same coaching, whatever road the money takes.</p>
