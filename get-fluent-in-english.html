@@ -16,6 +16,9 @@
 <meta name="twitter:description" content="1:1 English fluency coaching with Nelly Sugu: 18-month curriculum, weekly check-ins, daily voice-note homework. Message me on WhatsApp to start.">
 <meta name="twitter:image" content="https://jonly03.github.io/og-english-fluency.jpg">
 <meta name="description" content="1:1 English fluency coaching with Nelly Sugu. 18-month curriculum, weekly check-ins, daily voice-note homework. Online, anywhere in the world.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,700;0,6..72,800;1,6..72,500;1,6..72,600&family=Public+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
   :root { --bg:#0f0e0c; --card:#1a1815; --ink:#f5f1e8; --muted:#b8b0a0; --accent:#e8b33d; --line:#2c2822; }
   * { box-sizing:border-box; margin:0; padding:0; }
@@ -68,6 +71,137 @@
   .week:last-child { border-bottom:none; }
   .week b.badge { flex:0 0 86px; color:var(--accent); font-size:13px; text-transform:uppercase; letter-spacing:.06em; padding-top:3px; }
   .week div strong { color:var(--ink); }
+
+/* --- Pricing panel (ported from offering cards) --- */
+.px{
+  --px-bg:#f7f2e4;
+   --px-paper:#fffdf6;
+   --px-paper2:#fdf6e3;
+  
+  --px-ink:#17251c;
+   --px-muted:#5c6b60;
+   --px-line:#ddd2b8;
+  
+  --px-forest:#173a2a;
+   --px-forest2:#1f4d36;
+   --px-forest-ink:#f3ecd7;
+  
+  --px-terra:#c25424;
+   --px-terra-dark:#9c3f18;
+   --px-ochre:#d9a441;
+   --px-ochre-soft:#f3d98b;
+  
+  --px-sand:#efe4c8;
+   --px-good:#1f6b3a;
+  
+  --px-radius:18px;
+  background:var(--px-bg); color:var(--px-ink); font-family:"Public Sans",system-ui,sans-serif; line-height:1.55; border-radius:24px; padding:30px 24px 26px; margin:40px 0 8px;
+}
+.px *{box-sizing:border-box}
+.px a{color:inherit}
+.px .wrap{max-width:1120px;margin:0 auto;padding:0 20px 64px}
+.px h2, .px h2, .px h3{font-family:"Newsreader",Georgia,serif;line-height:1.02;margin:0}
+.px p{margin:0}
+.px /* Intro */
+.px-intro{padding:36px 0 8px;display:grid;grid-template-columns:1.25fr .75fr;gap:28px;align-items:end}
+.px .px-intro h2{font-size:clamp(2.4rem,6vw,4.2rem);font-weight:800;letter-spacing:-.02em}
+.px .px-intro h2 em{font-style:italic;font-weight:600;color:var(--px-terra)}
+.px .px-lede{margin-top:16px;font-size:1.08rem;color:var(--px-muted);max-width:56ch}
+.px .px-lede strong{color:var(--px-ink)}
+.px .px-toggle-box{background:var(--px-forest);color:var(--px-forest-ink);border-radius:var(--px-radius);padding:20px}
+.px .px-toggle-box p.px-label{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;opacity:.75}
+.px .px-toggle-box h3{font-size:1.35rem;margin:6px 0 4px}
+.px .px-toggle-box .px-sub{font-size:.92rem;opacity:.85}
+.px .px-seg{display:flex;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:4px;margin-top:16px}
+.px .px-seg button{flex:1;border:0;background:transparent;color:var(--px-forest-ink);font:inherit;font-weight:700;font-size:.92rem;padding:10px 8px;border-radius:999px;cursor:pointer}
+.px .px-seg button[aria-pressed="true"]{background:var(--px-ochre);color:#1d2a1e}
+.px .px-seg button:focus-visible, .px .px-cta:focus-visible, .px a:focus-visible{outline:3px solid var(--px-ochre);outline-offset:2px}
+.px .px-market-note{margin-top:12px;font-size:.85rem;opacity:.85}
+.px /* Ladder */
+.px-ladder{margin:26px 0 6px;background:var(--px-paper);border:1px solid var(--px-line);border-radius:var(--px-radius);padding:18px 20px}
+.px .px-ladder-head{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline}
+.px .px-ladder-head h2{font-size:1.25rem}
+.px .px-ladder-head span{font-size:.88rem;color:var(--px-muted)}
+.px .px-ladder-track{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:16px}
+.px .px-rung{padding:12px 14px;border-top:3px solid var(--px-line)}
+.px .px-rung:nth-child(1){border-color:var(--px-ochre)}
+.px .px-rung:nth-child(2){border-color:#c98a3a}
+.px .px-rung:nth-child(3){border-color:var(--px-terra)}
+.px .px-rung:nth-child(4){border-color:var(--px-forest2)}
+.px .px-rung b{display:block;font-family:"IBM Plex Mono",monospace;font-size:1.05rem}
+.px .px-rung span{font-size:.85rem;color:var(--px-muted)}
+.px /* Sections */
+.px-section{margin-top:42px}
+.px .px-section-head{display:grid;grid-template-columns:1fr 340px;gap:24px;align-items:center;margin-bottom:20px}
+.px .px-section-head h2{font-size:clamp(1.9rem,4vw,2.7rem);font-weight:800}
+.px .px-section-head h2 em{color:var(--px-terra);font-weight:600}
+.px .px-section-head p{color:var(--px-muted);margin-top:8px;max-width:58ch}
+.px .px-section-head img{width:100%;height:190px;object-fit:cover;border-radius:14px;border:1px solid var(--px-line);display:block}
+.px .px-cards{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.px .px-card{background:var(--px-paper);border:1px solid var(--px-line);border-radius:20px;padding:26px;display:flex;flex-direction:column;position:relative;overflow:hidden}
+.px .px-card.px-featured{border:2px solid var(--px-forest2)}
+.px .px-card.px-featured::before{content:"";position:absolute;inset:0 0 auto 0;height:6px;background:var(--px-terra)}
+.px .px-card-top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.px .px-pill{font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;font-weight:800;padding:6px 9px;border-radius:999px;background:var(--px-sand);color:var(--px-ink);white-space:nowrap}
+.px .px-pill.px-hot{background:var(--px-terra);color:#fff}
+.px .px-card h3{font-size:1.85rem;font-weight:800;margin-top:2px}
+.px .px-card .px-for{color:var(--px-muted);font-size:.95rem;margin-top:6px}
+.px .px-price{margin:20px 0 4px;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.px .px-price .px-amt{font-family:"IBM Plex Mono",monospace;font-size:2.35rem;font-weight:700;letter-spacing:-.04em;line-height:1}
+.px .px-price .px-per{color:var(--px-muted);font-weight:600;font-size:.92rem}
+.px .px-price-alt{font-size:.88rem;color:var(--px-muted)}
+.px .px-price-alt b{color:var(--px-ink)}
+.px .px-includes{list-style:none;margin:20px 0 0;padding:18px 0 0;border-top:1px solid var(--px-line);display:grid;gap:10px}
+.px .px-includes li{display:grid;grid-template-columns:18px 1fr;gap:9px;font-size:.96rem}
+.px .px-includes li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--px-terra);margin-top:7px}
+.px .px-includes li b{font-weight:700}
+.px .px-cadence{margin-top:18px;background:var(--px-paper2);border:1px solid var(--px-line);border-radius:12px;padding:14px 15px;display:grid;grid-template-columns:1fr 1fr;gap:10px 14px}
+.px .px-cadence div span{display:block;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--px-muted);font-weight:700}
+.px .px-cadence div b{font-size:.92rem}
+.px .px-cta{margin-top:20px;display:inline-flex;justify-content:center;align-items:center;gap:8px;text-decoration:none;font-weight:800;padding:13px 16px;border-radius:999px;background:var(--px-forest);color:#fff;text-align:center}
+.px .px-cta.px-secondary{background:transparent;color:var(--px-ink);border:1.5px solid var(--px-ink)}
+.px .px-cta:hover{filter:brightness(1.08)}
+.px .px-small{margin-top:10px;font-size:.82rem;color:var(--px-muted);text-align:center}
+.px /* Pod pool */
+.px-pool{margin-top:44px;background:var(--px-forest);color:var(--px-forest-ink);border-radius:22px;padding:30px;overflow:hidden}
+.px .px-pool h2{font-size:clamp(1.9rem,4vw,2.8rem);font-weight:800}
+.px .px-pool h2 em{color:var(--px-ochre)}
+.px .px-pool .px-intro-p{margin-top:10px;opacity:.9;max-width:68ch}
+.px .px-pool-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+.px .px-pool-example{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:18px}
+.px .px-pool-example .px-math{font-family:"IBM Plex Mono",monospace;font-size:1.35rem;font-weight:700;line-height:1.2}
+.px .px-pool-example .px-math span{color:var(--px-ochre)}
+.px .px-pool-example h3{font-family:"Public Sans",sans-serif;font-size:1rem;margin:10px 0 6px}
+.px .px-pool-example p{font-size:.9rem;opacity:.88}
+.px .px-pool-rules{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+.px .px-pool-rules div{border-top:2px solid var(--px-ochre);padding-top:12px}
+.px .px-pool-rules b{display:block;margin-bottom:4px}
+.px .px-pool-rules p{font-size:.9rem;opacity:.88}
+.px /* FAQ */
+.px-faq{margin-top:44px}
+.px .px-faq h2{font-size:2rem;font-weight:800}
+.px .px-faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px}
+.px .px-faq-item{background:var(--px-paper);border:1px solid var(--px-line);border-radius:16px;padding:20px}
+.px .px-faq-item h3{font-family:"Public Sans",sans-serif;font-size:1.02rem;line-height:1.3}
+.px .px-faq-item p{color:var(--px-muted);margin-top:8px;font-size:.95rem}
+.px .px-faq-item p strong{color:var(--px-ink)}
+.px .final{margin-top:36px;text-align:center;background:var(--px-paper2);border:1px dashed var(--px-terra);border-radius:18px;padding:26px 20px}
+.px .final h2{font-size:1.8rem}
+.px .final p{color:var(--px-muted);margin:8px auto 0;max-width:54ch}
+.px .final .px-cta{margin-top:18px;min-width:min(340px,100%)}
+.px .px-foot{margin-top:22px;font-size:.84rem;color:var(--px-muted);text-align:center}
+.px p, .px li{ color:inherit; }
+.px .px-intro{ grid-template-columns:1fr; align-items:start; padding-top:0; }
+.px .px-intro h2{ font-size:clamp(2rem,9vw,2.9rem); }
+.px .px-section-head{ grid-template-columns:1fr; }
+.px .px-section-head img{ height:170px; }
+.px .px-cards{ grid-template-columns:1fr; }
+.px .px-ladder-track{ grid-template-columns:1fr 1fr; }
+.px .px-pool-grid, .px .px-pool-rules, .px .px-faq-grid{ grid-template-columns:1fr; }
+.px .px-pool{ padding:24px 20px; }
+.px .px-card{ padding:24px 20px; }
+.px img{ max-width:100%; }
+
 </style>
 </head>
 <body>
@@ -135,10 +269,194 @@
     <p class="t-quote">&ldquo;There is something I know I cannot miss. I cannot sleep without sending [my voice note]. This month helped me start becoming the person I want to be.&rdquo;</p>
   </div>
 
-<h2>Payment</h2>
-  <div class="card">
-    <p><strong style="color:var(--ink)">Simple:</strong> one flat monthly rate. I&rsquo;m still wiring up the payment rails (card, bank transfer, mobile money) &mdash; so for now, just reach out. Send the first voice note and we&rsquo;ll sort the rest on the intro chat.</p>
-  </div>
+<div class="px" id="pricing">
+<header class="px-intro">
+    <div>
+      <h2>English fluency coaching, <em>priced plainly.</em></h2>
+      <p class="px-lede">No “DM me for pricing.” Pick <strong>1:1 or a pod</strong>, pick <strong>Full or Lite</strong>, and check the price for where you live. Every option starts the same way — with a voice note.</p>
+    </div>
+    <div class="px-toggle-box" aria-label="Choose your market">
+      <p class="px-label">Show prices for</p>
+      <h3 id="marketTitle">Diaspora</h3>
+      <p class="px-sub" id="marketSub">Outside Rwanda — priced in US dollars.</p>
+      <div class="px-seg" role="group" aria-label="Market">
+        <button type="button" id="btnDiaspora" aria-pressed="true">Diaspora · $</button>
+        <button type="button" id="btnLocal" aria-pressed="false">Rwanda · RWF</button>
+      </div>
+      <p class="px-market-note" id="marketNote">Local pricing will be re-anchored country by country as coaching expands beyond Rwanda — not just converted from dollars.</p>
+    </div>
+  </header>
+
+  <section class="px-ladder" aria-label="Price ladder">
+    <div class="px-ladder-head">
+      <h2>The ladder, at a glance</h2>
+      <span>Start Lite, step up to Full — or step down in a busy season instead of quitting.</span>
+    </div>
+    <div class="px-ladder-track">
+      <div class="px-rung"><b data-price data-d="$60" data-l="50,000 RWF">$60</b><span>Pod Lite · per person / mo</span></div>
+      <div class="px-rung"><b data-price data-d="$115" data-l="95,000 RWF">$115</b><span>Pod Full · per person / mo</span></div>
+      <div class="px-rung"><b data-price data-d="$230" data-l="160,000 RWF">$230</b><span>1:1 Lite · per month</span></div>
+      <div class="px-rung"><b data-price data-d="$450" data-l="315,000 RWF">$450</b><span>1:1 Full · per month</span></div>
+    </div>
+  </section>
+
+  <!-- 1:1 -->
+  <section class="px-section" id="one-to-one">
+    <div class="px-section-head">
+      <div>
+        <h2>One-to-one — <em>just you and your coach</em></h2>
+        <p>The fastest, most personal route. Your calls, your voice notes, and feedback written for you alone — built on the 18-month fluency curriculum.</p>
+      </div>
+      <img src="pricing-1on1.webp" alt="Illustration of a one-to-one coaching video call, with a notebook and a phone showing a voice note" />
+    </div>
+
+    <div class="px-cards">
+      <article class="px-card px-featured">
+        <div class="px-card-top"><h3>1:1 Full</h3><span class="px-pill px-hot">Most personal</span></div>
+        <p class="px-for">For a serious fluency goal — work, interviews, relocation, or speaking with confidence every day.</p>
+        <div class="px-price"><span class="px-amt" data-price data-d="$450" data-l="315,000 RWF">$450</span><span class="px-per">/ month</span></div>
+        <p class="px-price-alt">That is <b data-price data-d="$450 in USD" data-l="≈ $225 at 1,400 RWF / $">$450 in USD</b> · about 11 hours of coach time a month</p>
+        <ul class="px-includes">
+          <li><span><b>Weekly 1:1 call</b> — 60 minutes, every week</span></li>
+          <li><span><b>Daily weekday voice notes</b> — you speak every day, not just on call days</span></li>
+          <li><span><b>A personal reply to every note</b> — listened to, thought through, and answered in a voice note back</span></li>
+          <li><span><b>The full 18-month curriculum</b>, paced to you</span></li>
+          <li><span><b>Monthly deep review</b> — what improved, what is next, and the plan for the month ahead</span></li>
+        </ul>
+        <div class="px-cadence">
+          <div><span>Calls</span><b>4–5 × 60 min / mo</b></div>
+          <div><span>Voice notes</span><b>Weekdays, daily</b></div>
+          <div><span>Feedback</span><b>Every note, personally</b></div>
+          <div><span>Coach time</span><b>~11 hrs / mo</b></div>
+        </div>
+        <a class="px-cta" href="https://wa.me/17744344547?text=Hi%2C%20I%27m%20interested%20in%201%3A1%20Full%20coaching.%20Here%27s%20my%20intro%20voice%20note%3A" target="_blank" rel="noopener">Start with a voice note →</a>
+        <p class="px-small">Free intro chat first. Payment is sorted in that chat.</p>
+      </article>
+
+      <article class="px-card">
+        <div class="px-card-top"><h3>1:1 Lite</h3><span class="px-pill">Flexible pace</span></div>
+        <p class="px-for">For steady progress on a tighter budget or a busier schedule — same coach, same curriculum, lighter rhythm.</p>
+        <div class="px-price"><span class="px-amt" data-price data-d="$230" data-l="160,000 RWF">$230</span><span class="px-per">/ month</span></div>
+        <p class="px-price-alt">That is <b data-price data-d="$230 in USD" data-l="≈ $114 at 1,400 RWF / $">$230 in USD</b> · about 5¾ hours of coach time a month</p>
+        <ul class="px-includes">
+          <li><span><b>2 calls a month</b> — 60 minutes, every other week</span></li>
+          <li><span><b>Voice-note feedback 3× a week</b> — regular speaking practice with real replies</span></li>
+          <li><span><b>Same 18-month curriculum</b>, at a Lite pace</span></li>
+          <li><span><b>Monthly check-in review</b> to keep you on track</span></li>
+          <li><span><b>Step up to Full any time</b> — or stay Lite in a busy season</span></li>
+        </ul>
+        <div class="px-cadence">
+          <div><span>Calls</span><b>2 × 60 min / mo</b></div>
+          <div><span>Voice notes</span><b>3× / week</b></div>
+          <div><span>Feedback</span><b>On practice days</b></div>
+          <div><span>Coach time</span><b>~5¾ hrs / mo</b></div>
+        </div>
+        <a class="px-cta px-secondary" href="https://wa.me/17744344547?text=Hi%2C%20I%27m%20interested%20in%201%3A1%20Lite%20coaching.%20Here%27s%20my%20intro%20voice%20note%3A" target="_blank" rel="noopener">Start with a voice note →</a>
+        <p class="px-small">Free intro chat first. Payment is sorted in that chat.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Pods -->
+  <section class="px-section" id="pods">
+    <div class="px-section-head">
+      <div>
+        <h2>Pods — <em>learn together, pay less</em></h2>
+        <p>A small group matched by level and schedule. You still speak every week and get the coach’s deep feedback — on a rotation, so the price per person stays low.</p>
+      </div>
+      <img src="pricing-pod.webp" alt="Illustration of a small group around a table for a tactical book review, books open" />
+    </div>
+
+    <div class="px-cards">
+      <article class="px-card px-featured">
+        <div class="px-card-top"><h3>Pod Full</h3><span class="px-pill px-hot">Best value</span></div>
+        <p class="px-for">For learners who want a weekly speaking rep, a book to anchor it, and a group that shows up.</p>
+        <div class="px-price"><span class="px-amt" data-price data-d="$115" data-l="95,000 RWF">$115</span><span class="px-per">/ person / month</span></div>
+        <p class="px-price-alt" data-price data-d="Pods of 4–8 · or pool a diaspora pod below" data-l="Pods of 4–8 · standard per-person price in Rwanda">Pods of 4–8 · or pool a diaspora pod below</p>
+        <ul class="px-includes">
+          <li><span><b>Weekly tactical book review call</b> — the book carries the curriculum</span></li>
+          <li><span><b>Guaranteed airtime:</b> 5 min talking + 2 min Q&amp;A for every person, every week — nobody hides</span></li>
+          <li><span><b>Daily practice thread</b> with the pod watching</span></li>
+          <li><span><b>Capped rotation feedback</b> — a deep, full reply on your spotlight day in the cycle</span></li>
+          <li><span><b>Matched by level + schedule</b>, same price for everyone in the pod</span></li>
+        </ul>
+        <div class="px-cadence">
+          <div><span>Calls</span><b>Weekly, 28–56 min</b></div>
+          <div><span>Your slot</span><b>5 min talk + 2 min Q&amp;A</b></div>
+          <div><span>Feedback</span><b>On your rotation day</b></div>
+          <div><span>Pod size</span><b>4–8 people</b></div>
+        </div>
+        <a class="px-cta" href="https://wa.me/17744344547?text=Hi%2C%20I%27m%20interested%20in%20Pod%20Full%20coaching.%20Here%27s%20my%20intro%20voice%20note%3A" target="_blank" rel="noopener">Start with a voice note →</a>
+        <p class="px-small">Pods launch when the group is assembled — see the pool below.</p>
+      </article>
+
+      <article class="px-card">
+        <div class="px-card-top"><h3>Pod Lite</h3><span class="px-pill">Lowest entry</span></div>
+        <p class="px-for">The easiest way in. A lighter rhythm, the same book-review format, at the lowest price on the ladder.</p>
+        <div class="px-price"><span class="px-amt" data-price data-d="$60" data-l="50,000 RWF">$60</span><span class="px-per">/ person / month</span></div>
+        <p class="px-price-alt" data-price data-d="Pods of 4–8 · or build a pooled pod below" data-l="In Rwanda, below Action College Normal group classes at ~67,000 RWF / mo">Pods of 4–8 · or build a pooled pod below</p>
+        <ul class="px-includes">
+          <li><span><b>Book-review call every other week</b> — 5 min talking + 2 min Q&amp;A per person</span></li>
+          <li><span><b>Practice thread</b> with the pod between calls</span></li>
+          <li><span><b>Rotation feedback, 2× a week across the pod</b> — your deep reply on your spotlight day</span></li>
+          <li><span><b>Matched by level + schedule</b>, same price for everyone in the pod</span></li>
+          <li><span><b>Upgrade to Pod Full</b> when you want a weekly rep</span></li>
+        </ul>
+        <div class="px-cadence">
+          <div><span>Calls</span><b>Every other week</b></div>
+          <div><span>Your slot</span><b>5 min talk + 2 min Q&amp;A</b></div>
+          <div><span>Feedback</span><b>On your rotation day</b></div>
+          <div><span>Pod size</span><b>4–8 people</b></div>
+        </div>
+        <a class="px-cta px-secondary" href="https://wa.me/17744344547?text=Hi%2C%20I%27m%20interested%20in%20Pod%20Lite%20coaching.%20Here%27s%20my%20intro%20voice%20note%3A" target="_blank" rel="noopener">Start with a voice note →</a>
+        <p class="px-small">Pods launch when the group is assembled — see the pool below.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Pod pool -->
+  <section class="px-pool" id="pool">
+    <h2>Can’t do the full price alone? <em>Pool a pod.</em></h2>
+    <p class="px-intro-p">The cards above are the standard per-person pod prices. If 1:1 is out of reach, diaspora learners can pool a pod instead — a pooled pod launches when the group reaches about <strong>$400 a month together</strong>, so what each person pays depends on how many people share it. Smaller pod, more feedback and more airtime. Larger pod, lower price each. In Rwanda, pods run at the card prices — <strong>95,000 RWF for Pod Full, 50,000 RWF for Pod Lite</strong>.</p>
+    <div class="px-pool-grid">
+      <div class="px-pool-example">
+        <div class="px-math">2 × $200 <span>= $400</span></div>
+        <h3>Diaspora duo</h3>
+        <p>Two people who can each do $200 start a pod tomorrow — no waiting for eight. Feedback every 2 days in the rotation.</p>
+      </div>
+      <div class="px-pool-example">
+        <div class="px-math">4 × $100 <span>= $400</span></div>
+        <h3>Diaspora pod of four</h3>
+        <p>Four people at $100 each reach the same floor. Feedback every 4 days, more voices in the book review.</p>
+      </div>
+      <div class="px-pool-example">
+        <div class="px-math">8 × 95,000 <span>RWF</span></div>
+        <h3>Rwanda Pod Full — eight</h3>
+        <p>95,000 RWF each at the standard Pod Full rate — a pod of 8 with a real coach, a weekly book review, and feedback every 8 days in the rotation. Pod Lite is 50,000 RWF each.</p>
+      </div>
+    </div>
+    <div class="px-pool-rules">
+      <div><b>Same price inside a pod</b><p>Everyone in the same pod pays the same. No mixed prices in the same room.</p></div>
+      <div><b>Matched, not just grouped</b><p>Pods are built by level and schedule first, budget second — so the book review works for everyone.</p></div>
+      <div><b>If someone leaves</b><p>The pod doesn’t collapse on you. You’re merged into another pod or offered 1:1 Lite.</p></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="px-faq">
+    <h2>Questions people usually ask</h2>
+    <div class="px-faq-grid">
+      <div class="px-faq-item"><h3>“I can only afford $100 a month. Is there anything for me?”</h3><p>Yes — that’s exactly what a <strong>pooled pod</strong> is for. At $100 you join a pod of four diaspora learners (4 × $100) and the pod launches at $400 together.</p></div>
+      <div class="px-faq-item"><h3>“Why is pod feedback on a rotation, not every day?”</h3><p>Because a real reply takes real time — listening, thinking, and replying properly. The rotation <strong>caps the coach’s load at one deep reply a day</strong>, so your spotlight reply is thorough instead of rushed, and the pod price can stay low.</p></div>
+      <div class="px-faq-item"><h3>“Can I start Lite and move up?”</h3><p>Yes. Lite is the on-ramp. Move to Full when you want daily feedback and a weekly call — and step back down to Lite in a busy season <strong>instead of quitting</strong>.</p></div>
+      <div class="px-faq-item"><h3>“How do I start, and how do I pay?”</h3><p>Start with a <strong>free intro chat — send a voice note</strong> on WhatsApp. We check your level and which offering fits, and payment is sorted in that chat before coaching begins.</p></div>
+    </div>
+  </section>
+
+  
+
+  <p class="px-foot">Prices are monthly. Rwanda (local) prices are shown in RWF; diaspora prices in USD. Pod prices are per person unless a pooled pod is shown.</p>
+</div>
 
   <h2>Questions</h2>
   <details>
@@ -179,5 +497,25 @@
 
   <footer>🤔 Nelly Sugu · English Fluency Coach</footer>
 </div>
+
+<script>
+(function(){
+  var root=document.getElementById('pricing');
+  if(!root) return;
+  var btnD=document.getElementById('btnDiaspora'), btnL=document.getElementById('btnLocal');
+  var title=document.getElementById('marketTitle'), sub=document.getElementById('marketSub');
+  function setMarket(local){
+    root.querySelectorAll('[data-price]').forEach(function(el){
+      el.textContent = local ? el.getAttribute('data-l') : el.getAttribute('data-d');
+    });
+    btnD.setAttribute('aria-pressed', local ? 'false' : 'true');
+    btnL.setAttribute('aria-pressed', local ? 'true' : 'false');
+    title.textContent = local ? 'Rwanda \u2014 Local' : 'Diaspora';
+    sub.textContent = local ? 'In Rwanda \u2014 priced in Rwandan francs.' : 'Outside Rwanda \u2014 priced in US dollars.';
+  }
+  btnD.addEventListener('click', function(){ setMarket(false); });
+  btnL.addEventListener('click', function(){ setMarket(true); });
+})();
+</script>
 </body>
 </html>
