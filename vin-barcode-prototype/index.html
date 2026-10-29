@@ -28,14 +28,66 @@
   .warn { color: #ff9d7a; font-size: 13px; font-weight: 600; }
   .fine { color: #9fb0c1; font-size: 12px; line-height: 1.5; margin-top: 16px; }
   .fine b { color: #c9d6e3; }
+  .steps { display: grid; gap: 10px; margin: 12px 0 4px; }
+  .step { background: #131c26; border: 1px solid #263646; border-radius: 12px; padding: 10px 12px; }
+  .step h3 { margin: 0 0 6px; font-size: 15px; }
+  .step p { margin: 6px 0 0; font-size: 13px; color: #9fb0c1; line-height: 1.45; }
+  .step svg { width: 100%; height: auto; display: block; }
+
 </style>
 </head>
 <body>
   <h1>🚗 VIN Barcode Scan — prototype</h1>
-  <p class="sub">Point the camera at the <b>barcode on the driver's door-jamb label</b> (the sticker you see with the door open). It reads the VIN exactly — no guessing like photo OCR. Everything happens on this phone: no photo is uploaded or saved.</p>
+  <p class="sub">Point the camera at the <b>barcode or QR code on the driver's door-jamb sticker</b>. It reads the VIN exactly — no guessing like photo OCR. Everything happens on this phone: no photo is uploaded or saved.</p>
+
+
+  <section class="steps">
+    <div class="step">
+      <h3>1 · Open the driver's door</h3>
+      
+<svg viewBox="0 0 340 170" role="img" aria-label="Diagram: open driver door, sticker highlighted on the door frame">
+  <polygon points="28,28 116,42 116,148 28,162" fill="#24405c" stroke="#6fa8dc" stroke-width="2"/>
+  <polygon points="42,42 102,52 102,90 42,96" fill="#9fc3e8" opacity="0.45"/>
+  <rect x="90" y="106" width="17" height="5" rx="2.5" fill="#6fa8dc"/>
+  <rect x="140" y="16" width="184" height="142" rx="14" fill="#10161d" stroke="#4a6a8a" stroke-width="3"/>
+  <rect x="152" y="28" width="160" height="118" rx="10" fill="#05080b"/>
+  <path d="M168 146 L168 110 Q168 101 177 101 L195 101 Q204 101 204 110 L204 146 Z" fill="#22303f"/>
+  <rect x="160" y="130" width="72" height="13" rx="5" fill="#22303f"/>
+  <rect x="284" y="28" width="28" height="118" fill="#16222e"/>
+  <rect x="291" y="54" width="15" height="48" rx="2" fill="#e8edf2"/>
+  <rect x="294" y="59" width="9" height="2.5" fill="#12222e"/><rect x="294" y="64" width="9" height="2.5" fill="#12222e"/>
+  <rect x="294" y="70" width="9" height="14" fill="#12222e" opacity="0.85"/>
+  <rect x="294" y="87" width="9" height="9" fill="#fff" stroke="#12222e"/>
+  <circle cx="298" cy="78" r="25" fill="none" stroke="#ffd479" stroke-width="3"/>
+  <circle cx="298" cy="78" r="3" fill="#ffd479"/>
+</svg>
+      <p>The sticker is on the <b style="color:#e8edf2">frame the door closes against</b> — the door jamb. You can only see it with the door open, roughly where the door latch is.</p>
+    </div>
+    <div class="step">
+      <h3>2 · Find the VIN sticker</h3>
+      
+<svg viewBox="0 0 340 176" role="img" aria-label="Diagram: close-up of the certification sticker showing the VIN, a barcode and a QR code">
+  <path d="M14 32 L14 14 L32 14" fill="none" stroke="#ffd479" stroke-width="3"/>
+  <path d="M308 14 L326 14 L326 32" fill="none" stroke="#ffd479" stroke-width="3"/>
+  <path d="M326 144 L326 162 L308 162" fill="none" stroke="#ffd479" stroke-width="3"/>
+  <path d="M32 162 L14 162 L14 144" fill="none" stroke="#ffd479" stroke-width="3"/>
+  <rect x="34" y="20" width="272" height="136" rx="8" fill="#e8edf2"/>
+  <text x="48" y="42" font-size="11" font-weight="700" fill="#33424f" letter-spacing="1">VEHICLE CERTIFICATION</text>
+  <rect x="48" y="52" width="110" height="5" fill="#b9c6d2"/><rect x="48" y="62" width="88" height="5" fill="#b9c6d2"/>
+  <rect x="176" y="52" width="72" height="5" fill="#b9c6d2"/><rect x="176" y="62" width="58" height="5" fill="#b9c6d2"/>
+  <text x="48" y="89" font-size="12" font-weight="700" fill="#12222e">VIN</text>
+  <text x="80" y="89" font-family="ui-monospace, Menlo, monospace" font-size="13.5" fill="#12222e">1C4HJXEG3JW224862</text>
+  <rect x="48" y="96" width="3" height="34" fill="#12222e"/><rect x="53" y="96" width="1" height="34" fill="#12222e"/><rect x="56" y="96" width="2" height="34" fill="#12222e"/><rect x="60" y="96" width="1" height="34" fill="#12222e"/><rect x="63" y="96" width="1" height="34" fill="#12222e"/><rect x="66" y="96" width="3" height="34" fill="#12222e"/><rect x="71" y="96" width="2" height="34" fill="#12222e"/><rect x="75" y="96" width="2" height="34" fill="#12222e"/><rect x="79" y="96" width="1" height="34" fill="#12222e"/><rect x="82" y="96" width="1" height="34" fill="#12222e"/><rect x="85" y="96" width="3" height="34" fill="#12222e"/><rect x="90" y="96" width="1" height="34" fill="#12222e"/><rect x="93" y="96" width="2" height="34" fill="#12222e"/><rect x="97" y="96" width="1" height="34" fill="#12222e"/><rect x="100" y="96" width="1" height="34" fill="#12222e"/><rect x="103" y="96" width="2" height="34" fill="#12222e"/><rect x="107" y="96" width="3" height="34" fill="#12222e"/><rect x="112" y="96" width="1" height="34" fill="#12222e"/><rect x="115" y="96" width="2" height="34" fill="#12222e"/><rect x="119" y="96" width="1" height="34" fill="#12222e"/><rect x="122" y="96" width="1" height="34" fill="#12222e"/><rect x="125" y="96" width="3" height="34" fill="#12222e"/><rect x="130" y="96" width="1" height="34" fill="#12222e"/><rect x="133" y="96" width="2" height="34" fill="#12222e"/><rect x="137" y="96" width="3" height="34" fill="#12222e"/><rect x="142" y="96" width="1" height="34" fill="#12222e"/><rect x="145" y="96" width="2" height="34" fill="#12222e"/><rect x="149" y="96" width="1" height="34" fill="#12222e"/><rect x="152" y="96" width="1" height="34" fill="#12222e"/><rect x="155" y="96" width="3" height="34" fill="#12222e"/><rect x="160" y="96" width="2" height="34" fill="#12222e"/><rect x="164" y="96" width="2" height="34" fill="#12222e"/><rect x="168" y="96" width="1" height="34" fill="#12222e"/><rect x="171" y="96" width="1" height="34" fill="#12222e"/><rect x="174" y="96" width="3" height="34" fill="#12222e"/><rect x="179" y="96" width="1" height="34" fill="#12222e"/><rect x="182" y="96" width="2" height="34" fill="#12222e"/><rect x="186" y="96" width="1" height="34" fill="#12222e"/><rect x="189" y="96" width="1" height="34" fill="#12222e"/><rect x="192" y="96" width="2" height="34" fill="#12222e"/><rect x="196" y="96" width="3" height="34" fill="#12222e"/>
+  <rect x="222" y="92" width="52" height="52" fill="#fff" stroke="#12222e" stroke-width="1.5"/><rect x="224" y="94" width="12" height="12" fill="#12222e"/><rect x="226" y="96" width="8" height="8" fill="#fff"/><rect x="228" y="98" width="4" height="4" fill="#12222e"/><rect x="258" y="94" width="12" height="12" fill="#12222e"/><rect x="260" y="96" width="8" height="8" fill="#fff"/><rect x="262" y="98" width="4" height="4" fill="#12222e"/><rect x="224" y="128" width="12" height="12" fill="#12222e"/><rect x="226" y="130" width="8" height="8" fill="#fff"/><rect x="228" y="132" width="4" height="4" fill="#12222e"/><rect x="244" y="98" width="4" height="4" fill="#12222e"/><rect x="240" y="102" width="4" height="4" fill="#12222e"/><rect x="244" y="102" width="4" height="4" fill="#12222e"/><rect x="248" y="102" width="4" height="4" fill="#12222e"/><rect x="240" y="106" width="4" height="4" fill="#12222e"/><rect x="224" y="110" width="4" height="4" fill="#12222e"/><rect x="228" y="110" width="4" height="4" fill="#12222e"/><rect x="236" y="110" width="4" height="4" fill="#12222e"/><rect x="240" y="110" width="4" height="4" fill="#12222e"/><rect x="244" y="110" width="4" height="4" fill="#12222e"/><rect x="248" y="110" width="4" height="4" fill="#12222e"/><rect x="232" y="114" width="4" height="4" fill="#12222e"/><rect x="252" y="114" width="4" height="4" fill="#12222e"/><rect x="256" y="114" width="4" height="4" fill="#12222e"/><rect x="260" y="114" width="4" height="4" fill="#12222e"/><rect x="264" y="114" width="4" height="4" fill="#12222e"/><rect x="272" y="114" width="4" height="4" fill="#12222e"/><rect x="228" y="118" width="4" height="4" fill="#12222e"/><rect x="240" y="118" width="4" height="4" fill="#12222e"/><rect x="244" y="118" width="4" height="4" fill="#12222e"/><rect x="260" y="118" width="4" height="4" fill="#12222e"/><rect x="264" y="118" width="4" height="4" fill="#12222e"/><rect x="224" y="122" width="4" height="4" fill="#12222e"/><rect x="228" y="122" width="4" height="4" fill="#12222e"/><rect x="232" y="122" width="4" height="4" fill="#12222e"/><rect x="244" y="122" width="4" height="4" fill="#12222e"/><rect x="248" y="122" width="4" height="4" fill="#12222e"/><rect x="252" y="122" width="4" height="4" fill="#12222e"/><rect x="256" y="122" width="4" height="4" fill="#12222e"/><rect x="264" y="122" width="4" height="4" fill="#12222e"/><rect x="224" y="126" width="4" height="4" fill="#12222e"/><rect x="232" y="126" width="4" height="4" fill="#12222e"/><rect x="240" y="126" width="4" height="4" fill="#12222e"/><rect x="248" y="126" width="4" height="4" fill="#12222e"/><rect x="252" y="126" width="4" height="4" fill="#12222e"/><rect x="264" y="126" width="4" height="4" fill="#12222e"/><rect x="272" y="126" width="4" height="4" fill="#12222e"/><rect x="240" y="130" width="4" height="4" fill="#12222e"/><rect x="252" y="130" width="4" height="4" fill="#12222e"/><rect x="260" y="130" width="4" height="4" fill="#12222e"/><rect x="264" y="130" width="4" height="4" fill="#12222e"/><rect x="272" y="130" width="4" height="4" fill="#12222e"/><rect x="240" y="134" width="4" height="4" fill="#12222e"/><rect x="244" y="134" width="4" height="4" fill="#12222e"/><rect x="248" y="134" width="4" height="4" fill="#12222e"/><rect x="256" y="134" width="4" height="4" fill="#12222e"/><rect x="264" y="134" width="4" height="4" fill="#12222e"/><rect x="252" y="138" width="4" height="4" fill="#12222e"/><rect x="256" y="138" width="4" height="4" fill="#12222e"/><rect x="268" y="138" width="4" height="4" fill="#12222e"/><rect x="272" y="138" width="4" height="4" fill="#12222e"/><rect x="248" y="142" width="4" height="4" fill="#12222e"/><rect x="268" y="142" width="4" height="4" fill="#12222e"/><rect x="272" y="142" width="4" height="4" fill="#12222e"/>
+  <text x="48" y="146" font-size="9.5" fill="#5a6b7a">BARCODE — most cars</text>
+  <text x="222" y="152" font-size="9.5" fill="#5a6b7a">QR — newer cars</text>
+</svg>
+      <p>Look for the VIN line. Most cars print a <b style="color:#e8edf2">barcode</b> under it; newer cars add a <b style="color:#e8edf2">QR code</b>. Either one scans — point the camera at it below.</p>
+    </div>
+  </section>
 
   <video id="video" playsinline muted></video>
-  <p class="frame-hint" id="frameHint">Hold the barcode inside the frame, about 6–10 inches away. Give it a second to focus.</p>
+  <p class="frame-hint" id="frameHint">Hold the barcode or QR code inside the frame, about 6–10 inches away. Give it a second to focus.</p>
 
   <button id="startBtn">📷 Start camera scan</button>
   <button id="stopBtn" class="secondary" style="display:none">Stop camera</button>
@@ -57,7 +109,7 @@
   </div>
 
   <p class="fine">
-    <b>How it works:</b> open-source ZXing reader (WASM build) decodes the Code&nbsp;39 barcode printed under the VIN on the certification label.
+    <b>How it works:</b> open-source ZXing reader (WASM build) decodes the barcode or QR code printed with the VIN on the certification label.
     A decoded VIN is then verified with the VIN's own built-in <b>check digit</b> (position 9), and the vehicle is identified with the free NHTSA vPIC decoder — the same public API family Case Core can call.
     <br /><b>Limits:</b> the door must be open; worn or dirty labels may not scan; photo OCR and manual typing stay as fallbacks.
   </p>
@@ -103,7 +155,7 @@ async function onDecoded(text, format) {
     $("checkLine").textContent = `Read a ${format || "barcode"} but it doesn't contain a 17-character VIN: “${text}”`;
     $("vinOut").textContent = "";
     $("carOut").textContent = "";
-    statusEl.textContent = "Try the VIN barcode on the door-jamb label.";
+    statusEl.textContent = "Try the barcode or QR code on the door-jamb sticker.";
     return;
   }
   resultEl.classList.remove("bad");
@@ -130,7 +182,7 @@ async function decodeBlob(blob, sourceLabel) {
   try {
     const results = await readBarcodes(blob, READER_OPTS);
     if (results.length) { await onDecoded(results[0].text, results[0].format); return true; }
-    statusEl.textContent = "No barcode found. Get closer, fill the frame with just the barcode, and avoid glare.";
+    statusEl.textContent = "No barcode or QR code found. Get closer, fill the frame with just the code, and avoid glare.";
     return false;
   } catch (e) {
     statusEl.textContent = "Reader error: " + (e && e.message ? e.message : e);
@@ -154,7 +206,7 @@ $("startBtn").addEventListener("click", async () => {
   $("startBtn").style.display = "none";
   $("stopBtn").style.display = "block";
   scanning = true;
-  statusEl.textContent = "Scanning… point at the door-jamb barcode.";
+  statusEl.textContent = "Scanning… point at the door-jamb barcode or QR code.";
   const canvas = document.createElement("canvas");
   const tick = async () => {
     if (!scanning) return;
