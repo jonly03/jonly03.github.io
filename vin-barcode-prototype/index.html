@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>VIN Barcode Scan — Case Core Prototype</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: system-ui, -apple-system, sans-serif; background: #0f1419; color: #e8edf2; padding: 16px; max-width: 560px; margin-inline: auto; }
+  h1 { font-size: 20px; margin: 4px 0 2px; }
+  .sub { color: #9fb0c1; font-size: 13px; margin-bottom: 14px; line-height: 1.45; }
+  video { width: 100%; border-radius: 12px; background: #000; display: none; }
+  video.on { display: block; }
+  .frame-hint { display: none; font-size: 13px; color: #ffd479; margin: 8px 0 0; }
+  .frame-hint.on { display: block; }
+  button, .filebtn { display: block; width: 100%; padding: 16px; margin: 10px 0; font-size: 17px; font-weight: 600; border: 0; border-radius: 12px; background: #1f6feb; color: #fff; cursor: pointer; text-align: center; }
+  button.secondary, .filebtn { background: #22303f; color: #e8edf2; border: 1px solid #35506b; }
+  button:active { transform: scale(.99); }
+  button[disabled] { opacity: .5; }
+  #status { font-size: 14px; color: #9fb0c1; min-height: 20px; margin: 10px 0; line-height: 1.45; }
+  #result { display: none; background: #12261a; border: 1px solid #2ea043; border-radius: 12px; padding: 14px; margin-top: 12px; }
+  #result.bad { background: #2a1616; border-color: #d64545; }
+  #result.show { display: block; }
+  .vin { font-family: ui-monospace, Menlo, monospace; font-size: 21px; letter-spacing: 1px; word-break: break-all; margin: 4px 0; }
+  .car { font-size: 17px; font-weight: 700; }
+  .ok { color: #3fb96c; font-size: 13px; font-weight: 600; }
+  .warn { color: #ff9d7a; font-size: 13px; font-weight: 600; }
+  .fine { color: #9fb0c1; font-size: 12px; line-height: 1.5; margin-top: 16px; }
+  .fine b { color: #c9d6e3; }
+</style>
+</head>
+<body>
+  <h1>🚗 VIN Barcode Scan — prototype</h1>
+  <p class="sub">Point the camera at the <b>barcode on the driver's door-jamb label</b> (the sticker you see with the door open). It reads the VIN exactly — no guessing like photo OCR. Everything happens on this phone: no photo is uploaded or saved.</p>
+
+  <video id="video" playsinline muted></video>
+  <p class="frame-hint" id="frameHint">Hold the barcode inside the frame, about 6–10 inches away. Give it a second to focus.</p>
+
+  <button id="startBtn">📷 Start camera scan</button>
+  <button id="stopBtn" class="secondary" style="display:none">Stop camera</button>
+
+  <label class="filebtn">🖼️ Or use a photo of the label
+    <input id="fileInput" type="file" accept="image/*" style="display:none" />
+  </label>
+
+  <button id="sampleBtn" class="secondary">🧪 No car handy? Test with a sample label</button>
+  <img id="sampleImg" src="sample-vin-barcode.png" alt="Sample VIN barcode" style="display:none" />
+
+  <p id="status">Ready.</p>
+
+  <div id="result">
+    <div id="checkLine" class="ok"></div>
+    <div class="vin" id="vinOut"></div>
+    <div class="car" id="carOut"></div>
+    <p class="sub" style="margin:8px 0 0">In Case Core, this is where staff taps “Use this VIN” — the same confirmation step the photo-OCR result uses today.</p>
+  </div>
+
+  <p class="fine">
+    <b>How it works:</b> open-source ZXing reader (WASM build) decodes the Code&nbsp;39 barcode printed under the VIN on the certification label.
+    A decoded VIN is then verified with the VIN's own built-in <b>check digit</b> (position 9), and the vehicle is identified with the free NHTSA vPIC decoder — the same public API family Case Core can call.
+    <br /><b>Limits:</b> the door must be open; worn or dirty labels may not scan; photo OCR and manual typing stay as fallbacks.
+  </p>
+
+<script type="module">
+import { readBarcodes, setZXingModuleOverrides } from "https://cdn.jsdelivr.net/npm/zxing-wasm@3.1.6/dist/es/reader/index.js";
+
+setZXingModuleOverrides({
+  locateFile: (path, prefix) => path.endsWith(".wasm")
+    ? "https://cdn.jsdelivr.net/npm/zxing-wasm@3.1.6/dist/reader/zxing_reader.wasm"
+    : prefix + path,
+});
+
+const $ = (id) => document.getElementById(id);
+const statusEl = $("status"), resultEl = $("result");
+let stream = null, scanning = false;
+
+const READER_OPTS = { formats: ["Code39", "Code128", "QRCode", "DataMatrix", "PDF417"], tryHarder: true, maxNumberOfSymbols: 1 };
+
+// ---- VIN extraction + validation -------------------------------------------
+function extractVin(text) {
+  if (!text) return null;
+  const clean = text.toUpperCase().replace(/[^A-Z0-9]/g, "");
+  const m = clean.match(/[A-HJ-NPR-Z0-9]{17}/); // VINs never contain I, O, Q
+  return m ? m[0] : (clean.length >= 17 ? clean.slice(0, 17) : null);
+}
+function checkDigitOk(vin) {
+  const vals = {A:1,B:2,C:3,D:4,E:5,F:6,G:7,H:8,J:1,K:2,L:3,M:4,N:5,P:7,R:9,S:2,T:3,U:4,V:5,W:6,X:7,Y:8,Z:9};
+  const w = [8,7,6,5,4,3,2,10,0,9,8,7,6,5,4,3,2];
+  let sum = 0;
+  for (let i = 0; i < 17; i++) { const c = vin[i]; const v = /\d/.test(c) ? +c : vals[c]; if (v === undefined) return false; sum += v * w[i]; }
+  const rem = sum % 11;
+  return vin[8] === (rem === 10 ? "X" : String(rem));
+}
+
+// ---- Result handling ---------------------------------------------------------
+async function onDecoded(text, format) {
+  const vin = extractVin(text);
+  resultEl.classList.add("show");
+  if (!vin) {
+    resultEl.classList.add("bad");
+    $("checkLine").className = "warn";
+    $("checkLine").textContent = `Read a ${format || "barcode"} but it doesn't contain a 17-character VIN: “${text}”`;
+    $("vinOut").textContent = "";
+    $("carOut").textContent = "";
+    statusEl.textContent = "Try the VIN barcode on the door-jamb label.";
+    return;
+  }
+  resultEl.classList.remove("bad");
+  const ok = checkDigitOk(vin);
+  $("checkLine").className = ok ? "ok" : "warn";
+  $("checkLine").textContent = ok ? "✓ Barcode decoded — VIN check digit valid" : "⚠ Barcode decoded — check digit does NOT match (verify visually before using)";
+  $("vinOut").textContent = vin;
+  $("carOut").textContent = "Identifying vehicle…";
+  statusEl.textContent = "Decoded from " + (format || "barcode") + ".";
+  try { navigator.vibrate && navigator.vibrate(120); } catch {}
+  try {
+    const r = await fetch(`https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVinValues/${vin}?format=json`);
+    const j = await r.json();
+    const row = (j.Results && j.Results[0]) || {};
+    const car = [row.ModelYear, row.Make, row.Model, row.Trim].filter(Boolean).join(" ");
+    $("carOut").textContent = car || "NHTSA didn't return a vehicle for this VIN.";
+  } catch {
+    $("carOut").textContent = "Couldn't reach NHTSA to identify the vehicle (VIN itself is decoded and valid).";
+  }
+}
+
+async function decodeBlob(blob, sourceLabel) {
+  statusEl.textContent = `Reading ${sourceLabel}…`;
+  try {
+    const results = await readBarcodes(blob, READER_OPTS);
+    if (results.length) { await onDecoded(results[0].text, results[0].format); return true; }
+    statusEl.textContent = "No barcode found. Get closer, fill the frame with just the barcode, and avoid glare.";
+    return false;
+  } catch (e) {
+    statusEl.textContent = "Reader error: " + (e && e.message ? e.message : e);
+    return false;
+  }
+}
+
+// ---- Camera loop -------------------------------------------------------------
+$("startBtn").addEventListener("click", async () => {
+  try {
+    stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" }, audio: false });
+  } catch {
+    statusEl.textContent = "Camera not available here — use the photo option instead. (Camera needs a secure page: the Case Core app or an https link.)";
+    return;
+  }
+  const video = $("video");
+  video.srcObject = stream;
+  await video.play();
+  video.classList.add("on");
+  $("frameHint").classList.add("on");
+  $("startBtn").style.display = "none";
+  $("stopBtn").style.display = "block";
+  scanning = true;
+  statusEl.textContent = "Scanning… point at the door-jamb barcode.";
+  const canvas = document.createElement("canvas");
+  const tick = async () => {
+    if (!scanning) return;
+    if (video.readyState === 4 && video.videoWidth) {
+      canvas.width = video.videoWidth; canvas.height = video.videoHeight;
+      canvas.getContext("2d").drawImage(video, 0, 0);
+      const blob = await new Promise((res) => canvas.toBlob(res, "image/jpeg", 0.85));
+      if (blob && scanning) {
+        const hit = await decodeBlobQuiet(blob);
+        if (hit) { stopCamera(); return; }
+      }
+    }
+    if (scanning) setTimeout(tick, 250);
+  };
+  // quiet variant: don't spam status while scanning frames
+  async function decodeBlobQuiet(blob) {
+    try {
+      const results = await readBarcodes(blob, READER_OPTS);
+      if (results.length) { await onDecoded(results[0].text, results[0].format); return true; }
+    } catch {}
+    return false;
+  }
+  tick();
+});
+function stopCamera() {
+  scanning = false;
+  if (stream) stream.getTracks().forEach((t) => t.stop());
+  stream = null;
+  $("video").classList.remove("on");
+  $("frameHint").classList.remove("on");
+  $("startBtn").style.display = "block";
+  $("stopBtn").style.display = "none";
+}
+$("stopBtn").addEventListener("click", stopCamera);
+
+// ---- Photo + sample ------------------------------------------------------------
+$("fileInput").addEventListener("change", async (e) => {
+  const f = e.target.files && e.target.files[0];
+  if (f) await decodeBlob(f, "photo");
+});
+$("sampleBtn").addEventListener("click", async () => {
+  const img = $("sampleImg");
+  img.style.display = "block";
+  img.style.width = "100%";
+  const blob = await (await fetch("sample-vin-barcode.png")).blob();
+  await decodeBlob(blob, "sample label (a real 2018 Wrangler VIN)");
+});
+</script>
+</body>
+</html>
